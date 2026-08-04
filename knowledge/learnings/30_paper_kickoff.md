@@ -1,0 +1,36 @@
+# Writing pipeline and kickoff checklist
+
+Applies to every scientific text: paper, proceeding, grant proposal, cover letter. The order is fixed, because each step invalidates the previous one if taken out of turn.
+
+## The pipeline
+
+**0. Numbers final.** No drafting before the reported values are stable and reproducible from stored data (see [20_reproducibility.md](20_reproducibility.md)). Text written around numbers that later move has to be rewritten, and the rewrite is where inconsistencies survive.
+
+**1. Storyline, decided by the user.** A short `storyline.md`: the claim, the evidence for it in order, what is deliberately left out. This is a human decision, not a drafting step. Everything downstream inherits it.
+
+**2. Draft, section by section.** One section at a time, each reviewed before the next begins. Drafting the whole text in one pass produces a document whose middle contradicts its own introduction.
+
+**3. Citation check.** Every citation attached to a claim named in the sentence, no bare bundles, nothing cited that is not published or preprinted. Check the bibliography against what the text actually asserts, not against the reference list.
+
+**4. Adversarial review in a fresh context.** Run `/review-adversarial`. It must not be the context that wrote the draft: that context knows what it meant and reads the gaps as filled.
+
+**5. Final pass by the user.** Not delegable.
+
+## Kickoff checklist
+
+Answer before step 1, because each answer constrains the storyline:
+
+- **Target venue** and its hard constraints: length, figure count, structure, citation style, whether supplementary material is allowed.
+- **Which numbers are final**, and which are still moving. If any are still moving, the pipeline has not started.
+- **Which figures exist**, which are placeholders, and who produces the missing ones.
+- **Author list and contributions**, decided at the start rather than negotiated at submission.
+- **Data and code availability**: what is released, where, under what licence, and whether a DOI is needed before submission.
+- **AI-assistance declaration**: what the venue requires and what you will state.
+- **Preprint policy** of the venue, and whether you intend to post one.
+- **Known reviewer objections**: the two or three comparisons or controls a hostile reader will demand. Decide now whether to run them, and if not, why the paper stands without them.
+
+## Recurring traps
+
+- A text block moved from an earlier manuscript brings its old framing; reread its first and last sentence in the new context.
+- Conclusions written before the discussion tend to claim more than the results section supports.
+- A limitation discovered late is easier to state plainly than to hide; reviewers find it either way, and a stated one costs less.

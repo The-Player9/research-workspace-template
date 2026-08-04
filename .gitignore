@@ -1,0 +1,69 @@
+# Raw and derived data — belongs in the workspace, not in the repository.
+# Large raw data lives outside the workspace entirely and is recorded in a
+# raw_manifest.md instead.
+data/raw/
+data/derived/
+*.npz
+*.npy
+*.mat
+*.obj
+*.pkl
+*.h5
+*.hdf5
+
+# Model checkpoints and training artefacts
+*.keras
+*.ckpt
+*.pt
+*.pth
+checkpoints/
+runs/
+results/
+wandb/
+
+# Secrets. Never commit an API key, not even in a branch.
+*.key
+key*.txt
+.env
+
+# Literature module: PDFs are copyrighted, the index is machine-local and large
+literature/papers/
+literature/.pqa/
+.pqa/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# File-sync artefacts (these appear when the workspace is synced by a
+# non-git tool; they must never enter the repository)
+.sync_*.db*
+*.nextcloudsync.log
+.~lock.*
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# The examples must survive every rule above: they are small, regenerable, and
+# the point of shipping them is that they are complete. This block has to stay
+# LAST — with gitignore, the last matching pattern wins.
+!examples/**
+examples/**/__pycache__/
