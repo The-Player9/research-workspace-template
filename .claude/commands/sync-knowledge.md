@@ -23,6 +23,7 @@ Each file gets its header line stating what belongs in it and at which level of 
 - List the directories in the workspace root, excluding `knowledge/` and hidden directories.
 - **Exclude** everything on the "excluded from knowledge sync" list in `knowledge/INDEX.md`: archives, meta-projects, grant applications. These get no knowledge file and no index entry.
 - For each remaining directory, check whether `knowledge/projects/<name>.md` exists. Report which projects are new and which are known.
+- **The exclusion list is the only place where a deferral survives.** A note in a project's own `CLAUDE.md` saying its knowledge file is postponed is not consulted here: a directory that is not on the list gets a file created in step 4, silently overriding that intention. A project that wants to wait belongs on the list with a reason and comes off it once it has something to hand over.
 
 ## 2. Read project context
 

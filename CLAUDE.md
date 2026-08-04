@@ -1,5 +1,5 @@
 <!-- TEMPLATE SKELETON — these are NOT active rules for the surrounding workspace. Placeholders are filled by /init-workspace when this repo is used as a workspace of its own. -->
-<!-- workspace-framework: 0.1.0 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} -->
+<!-- workspace-framework: 0.1.1 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} -->
 
 # Research Workspace — Parent CLAUDE.md
 

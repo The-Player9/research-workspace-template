@@ -23,6 +23,7 @@ Dated entries, experiment logs and running notes → `Laborbuch.md`, not in this
 ## Variants
 
 - **Not a research project** (a meta-project, an archive, a grant application): it still gets a `CLAUDE.md`, but no file under `knowledge/projects/`, and it belongs on the "excluded from knowledge sync" list in `knowledge/INDEX.md`. Otherwise the next sync creates a knowledge entry for something that has no findings to share.
+- **A research project that is not ready to share yet:** if you want to postpone its `knowledge/projects/` file, that decision belongs on the "excluded from knowledge sync" list, marked as temporary, and nowhere else. A note in the project's own `CLAUDE.md` does not survive: `/sync-knowledge` checks the list, not the note, and would create the file on its next run.
 - **Standalone project outside a workspace**: put a note at the top of its `CLAUDE.md` saying it is the project's memory file and that no memory files are kept outside the repository; add a `Laborbuch.md` as usual. No symlink, no shared base.
 
 ## Afterwards
