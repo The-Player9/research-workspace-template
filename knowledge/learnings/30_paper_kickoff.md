@@ -27,10 +27,13 @@ Answer before step 1, because each answer constrains the storyline:
 - **Data and code availability**: what is released, where, under what licence, and whether a DOI is needed before submission.
 - **AI-assistance declaration**: what the venue requires and what you will state.
 - **Preprint policy** of the venue, and whether you intend to post one.
+- **Style anchor and length budget**: which existing text defines the register, and how many words each section gets. A per-section budget disciplines sentence structure, a total page count does not. For a text type the anchor does not cover, a proposal when the anchor is a paper, get a sample paragraph from the user before the first line.
 - **Known reviewer objections**: the two or three comparisons or controls a hostile reader will demand. Decide now whether to run them, and if not, why the paper stands without them.
 
 ## Recurring traps
 
+- A style word that can name both a format and a register will be read as a register instruction. "Prose" meant "not a bullet list" and was read as "write in a flowing style", which is where transition and announcement sentences come from. Pin such a word to one reading when you write it into a `CLAUDE.md`.
+- A style rule stated for one text type is applied to that type only. A rule against long sentences that sits under "proposals" leaves the papers untouched, even when the same sentences were the problem there. Rules about sentences belong in the section that covers every text type.
 - A text block moved from an earlier manuscript brings its old framing; reread its first and last sentence in the new context.
 - Conclusions written before the discussion tend to claim more than the results section supports.
 - A limitation discovered late is easier to state plainly than to hide; reviewers find it either way, and a stated one costs less.

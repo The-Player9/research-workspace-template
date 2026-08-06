@@ -6,6 +6,20 @@ This file is what makes an update deliverable. `/init-workspace` writes the vers
 
 Each entry states what a user must **decide**, not only what moved. Format: `Added` / `Changed` / `Removed`, with the affected file in brackets.
 
+## 0.1.2 — 2026-08-06
+
+**Changed** [`CLAUDE.md`, `examples/filled-instance/README.md`, `knowledge/learnings/30_paper_kickoff.md`, `knowledge/learnings/60_grant_proposal.md`]
+
+- The writing conventions gain two rules that hold for every text type: one main thought per sentence, and no filler sentences, with a deletion test for the second. Both sit in the core `CLAUDE.md`, so they apply without anyone opening a learnings file.
+- The example instance no longer asks for "long, densely argued prose paragraphs". It asks for dense paragraphs, states that "prose" means "not a bullet list" and nothing more, and carries a concrete sentence-length target of 20 to 25 words.
+- Grant proposals get a register section of their own: short main clauses, justifications in separate sentences, no sentence that announces the next one, and a word budget agreed per work package before drafting.
+
+**Why:** the rule set described the paper register with the words "long" and "prose", and a drafting model reads that as permission to pad. The result was proposal text whose sentences ran past forty words and whose paragraphs opened with a sentence about the aim rather than a statement of it. Naming the failure mode is not enough, because "long, densely argued" contains its own contradiction: the fix is to ask for density and to state the sentence length as a number.
+
+**Decide, if you are updating from 0.1.1:** set your own sentence-length target and write it into the writing conventions of your `CLAUDE.md`. The 20 to 25 words in the example instance are one group's choice, not a framework default. If your conventions currently use the word "prose" anywhere, decide which of the two meanings you intend and say so in the same line.
+
+**Not done, deliberately:** the sentence target is not a `{{PLACEHOLDER}}` filled by `/init-workspace`. A style target is a decision a group makes after reading its own drafts, not at setup time, and a placeholder would force an answer at the one moment when nobody has evidence for it.
+
 ## 0.1.1 — 2026-08-04
 
 **Changed** [`.claude/commands/sync-knowledge.md`, `knowledge/learnings/50_new_subproject.md`]

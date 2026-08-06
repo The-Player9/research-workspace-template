@@ -1,5 +1,5 @@
 <!-- TEMPLATE SKELETON — these are NOT active rules for the surrounding workspace. Placeholders are filled by /init-workspace when this repo is used as a workspace of its own. -->
-<!-- workspace-framework: 0.1.1 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} -->
+<!-- workspace-framework: 0.1.2 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} -->
 
 # Research Workspace — Parent CLAUDE.md
 
@@ -62,6 +62,8 @@ Apply to **every** sub-project; stated only here, not duplicated in the project 
 Conventions for **every** scientific text. Fill these in for your own venue; the shipped example instance shows one filled-in variant.
 
 - Spelling: {{SPELLING}}. Citation style: {{CITATION_STYLE}}. Format: {{DOC_FORMAT}}.
+- **One main thought per sentence**, in every text type, papers as much as proposals. No multiply subordinated constructions; two sentences beat one sentence with two subordinate clauses. A longer sentence carries no more information, it spreads the same information over more words. Set a concrete target length in words and record it here, because a rule without a number does not survive a long drafting session.
+- **No filler sentences.** Cut anything that only announces, transitions, or asserts that something is important, and keep the substance as a statement of its own. Test: delete the sentence; if the text does not lose a claim about the subject matter, it stays deleted. A frame sentence that does carry a finding is rewritten to state the finding, not kept as a frame.
 - **Grade interpretations honestly.** Measured things as findings, inferred things with hedging ("it is assumed", "likely", "consistent with", "cannot be conclusively explained").
 - **Citations are content-bound**, never by author name and never as a bare bundled citation: attach each `\cite{}` to a specific claim named in the sentence.
 - **Cite only published or preprinted work.** Unpublished own manuscripts are mentioned in the text and shown as a figure, without a citation.

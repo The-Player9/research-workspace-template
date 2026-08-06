@@ -2,6 +2,12 @@
 
 Additional rules on top of the general writing conventions, which apply here as well. Funder-specific formatting is a local matter and belongs in the proposal's own `CLAUDE.md`.
 
+## Register: short main clauses
+
+A proposal is not written in the paper register. Long, densely argued paragraphs belong in a manuscript; here they cost the reviewer time and the author space. Keep to short main clauses, one thought each, and put justifications into sentences of their own rather than into subordinate clauses. Drop every sentence that announces what the next one says: the topic-sentence habit carried over from papers is what produces frame sentences that talk about the aim instead of stating it.
+
+Agree a **word budget per objective or work package** before the first line, not only a total page count. A total budget leaves the sentence structure free, and the padding then accumulates paragraph by paragraph until a late cut has to remove content. If someone in the group has written a funded proposal in the intended register, use one of its paragraphs as the style anchor; a sample paragraph constrains a draft more effectively than any description of style.
+
 ## Quantify the objectives
 
 Every work-package objective states **what will be measurable at the end**, not what will be worked on. "Characterise the response of X" is not an objective; "determine the response of X over the range A to B with an uncertainty below C" is. Reviewers score what they can check, and an unquantified objective cannot fail, which is why it also cannot convince.
