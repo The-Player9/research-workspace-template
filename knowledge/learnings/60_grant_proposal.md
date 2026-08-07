@@ -8,9 +8,13 @@ A proposal is not written in the paper register. Long, densely argued paragraphs
 
 Agree a **word budget per objective or work package** before the first line, not only a total page count. A total budget leaves the sentence structure free, and the padding then accumulates paragraph by paragraph until a late cut has to remove content. If someone in the group has written a funded proposal in the intended register, use one of its paragraphs as the style anchor; a sample paragraph constrains a draft more effectively than any description of style.
 
-## Quantify the objectives
+## Objectives, criteria and means are three different things
 
-Every work-package objective states **what will be measurable at the end**, not what will be worked on. "Characterise the response of X" is not an objective; "determine the response of X over the range A to B with an uncertainty below C" is. Reviewers score what they can check, and an unquantified objective cannot fail, which is why it also cannot convince.
+A work-package objective states **what will be known at the end**. It is not what will be done, and not what will be measured. Take a package that adds the sample thickness to a model. "Make the thickness an explicit input" is the means. "Keep the recovered concentrations within 5 % across all thicknesses" is the criterion. "Establish whether the recovered quantities stay the same when the sample geometry changes" is the objective. Only the third states what the package buys.
+
+Test before writing: what do we know afterwards that we did not know before? An answer of the form "that a number stays below a threshold" puts the criterion in the objective's place. That is the common failure, because the checkable sentence is the one already on the page. Quantification still applies, but at the right place: the number belongs to the validation criterion, the method to the approach.
+
+Two further checks. An objective whose result may also be a negative answer is an objective; one that would count as failure on a null result is a hope. A package that enables the variation instead of varying something (data generation, instrumentation) states its deliverable as its objective. Derive the objectives downwards from the project's research question, one varied factor per package, and check at the end that they together reproduce the argument of the proposal. Packages written upwards from methods and instruments end up stating means.
 
 ## Justify, do not assert
 
@@ -18,7 +22,7 @@ Every claim of feasibility is backed by something concrete: own preliminary work
 
 ## Work-package structure
 
-Each work package carries: objective (quantified), approach, deliverable, dependencies on other packages, and the risk that would derail it. Dependencies stated explicitly are what let a reviewer see whether the plan survives a delay in one package.
+Each work package carries: objective (a question, see above), approach, deliverable, validation criterion with its number, dependencies on other packages, and the risk that would derail it. Dependencies stated explicitly are what let a reviewer see whether the plan survives a delay in one package.
 
 ## No repetition across sections
 

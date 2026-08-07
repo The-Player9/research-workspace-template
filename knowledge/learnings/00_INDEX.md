@@ -12,7 +12,7 @@ These files are **not** loaded automatically, which keeps every session cheaper.
 | [30_paper_kickoff.md](30_paper_kickoff.md) | writing pipeline and kickoff checklist | before the first draft |
 | [40_error_catalog.md](40_error_catalog.md) | incident archive: repeated process errors, their cause, and where the countermeasure went | rarely; when a known pitfall is suspected, or when adding a new incident |
 | [50_new_subproject.md](50_new_subproject.md) | procedure for creating a sub-project | on every `/new-subproject` |
-| [60_grant_proposal.md](60_grant_proposal.md) | additional rules for funding proposals: quantified objectives, work-package shape, risk section | before the first line of a proposal |
+| [60_grant_proposal.md](60_grant_proposal.md) | additional rules for funding proposals: objective versus criterion versus means, work-package shape, risk section | before the first line of a proposal |
 
 **Writing:** like `knowledge/`, only when explicitly asked, with one exception — `40_error_catalog.md` may be extended without asking as soon as a repeatable process error appears. Keep entries dated, short, and tied to a concrete countermeasure.
 

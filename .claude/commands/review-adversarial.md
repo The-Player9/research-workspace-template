@@ -41,5 +41,5 @@ The review delivers the list, not the correction. Changes happen after the autho
 
 ## Notes
 
-- For **proposals**, additionally check: does every work package open with its objective, is every objective backed by a checkable number, is there a risk section for the high-risk packages, and is anything repeated (which eats the page limit)?
+- For **proposals**, additionally check: does every work package open with an objective that states what will be known rather than what will be built or measured, does a checkable number sit on the validation criterion, is there a risk section for the high-risk packages, and is anything repeated (which eats the page limit)?
 - A point that cannot be evidenced from the text does not belong in the list. Mark suspected weaknesses as suspected.

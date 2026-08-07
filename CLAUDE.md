@@ -1,5 +1,5 @@
 <!-- TEMPLATE SKELETON — these are NOT active rules for the surrounding workspace. Placeholders are filled by /init-workspace when this repo is used as a workspace of its own. -->
-<!-- workspace-framework: 0.1.2 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} -->
+<!-- workspace-framework: 0.1.3 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} -->
 
 # Research Workspace — Parent CLAUDE.md
 
@@ -69,7 +69,7 @@ Conventions for **every** scientific text. Fill these in for your own venue; the
 - **Cite only published or preprinted work.** Unpublished own manuscripts are mentioned in the text and shown as a figure, without a citation.
 - **Pipeline:** numbers final → storyline (decided by the user) → draft section by section → citation check → `/review-adversarial` in a fresh context → final pass by the user. Details → `knowledge/learnings/30_paper_kickoff.md`, **read before the first draft**.
 {{#IF GRANTS}}
-- **Funding proposals:** additional rules (quantified work-package objectives, no repetition across sections, justification duty, risk section) → `knowledge/learnings/60_grant_proposal.md`, **read before the first line of a proposal**. The conventions above apply there as well.
+- **Funding proposals:** additional rules (work-package objectives state what will be known, with the number on the validation criterion; no repetition across sections; justification duty; risk section) → `knowledge/learnings/60_grant_proposal.md`, **read before the first line of a proposal**. The conventions above apply there as well.
 {{/IF}}
 {{/IF}}
 

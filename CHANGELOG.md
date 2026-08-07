@@ -6,6 +6,20 @@ This file is what makes an update deliverable. `/init-workspace` writes the vers
 
 Each entry states what a user must **decide**, not only what moved. Format: `Added` / `Changed` / `Removed`, with the affected file in brackets.
 
+## 0.1.3 — 2026-08-07
+
+**Changed** [`CLAUDE.md`, `knowledge/learnings/00_INDEX.md`, `knowledge/learnings/60_grant_proposal.md`, `.claude/commands/review-adversarial.md`]
+
+- The section "Quantify the objectives" is replaced by "Objectives, criteria and means are three different things". A work-package objective states what will be known at the end; the checkable number moves onto the validation criterion, and the method moves to the approach.
+- The same file gains three checks: an objective whose result may also be a negative answer is an objective, a package that only enables the variation states its deliverable instead, and objectives are derived downwards from the project's research question with one varied factor per package.
+- `review-adversarial` no longer asks whether every objective carries a checkable number. It asks whether the objective states what will be known, and whether the number sits on the validation criterion. The trigger line in the core `CLAUDE.md` and the table row in the learnings index say the same.
+
+**Why:** the previous rule demanded a checkable number in every work-package objective. The most checkable sentence available is the validation criterion, so the criterion kept taking the objective's place, and the shipped example ("determine the response of X over the range A to B with an uncertainty below C") demonstrated exactly that substitution. The failure survives a style pass, because polishing a sentence does not change what type of statement it is. Reviewers do want something checkable, which is why the number stays mandatory; it just belongs one line further down.
+
+**Decide, if you are updating from 0.1.2:** read your last proposal's work-package objectives and sort each one into question, criterion or method. Only the first is an objective. Decide for the packages that state a criterion whether the underlying question is the one you actually want to answer, because that question is usually broader than the threshold that replaced it. Packages that generate data or build instrumentation keep their deliverable as the objective; do not rewrite those into questions.
+
+**Not done, deliberately:** no rule was added about how to phrase the objective sentence. The verb pattern is not the problem, and prescribing one ("establish whether …") would let a means sentence pass review as long as it starts correctly.
+
 ## 0.1.2 — 2026-08-06
 
 **Changed** [`CLAUDE.md`, `examples/filled-instance/README.md`, `knowledge/learnings/30_paper_kickoff.md`, `knowledge/learnings/60_grant_proposal.md`]
