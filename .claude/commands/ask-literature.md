@@ -4,6 +4,8 @@ Queries a local **PaperQA2** collection and returns an answer **with citations a
 
 > **Boundary:** this is the **external literature** layer, separate from the internal `knowledge/` base (your own findings) and from general model knowledge. Always label answers from here as coming from the literature collection, and never mix them silently with the other two.
 
+> **Not a code library.** The word "library" appears twice in this template and means two different things. The **literature collection** is other people's PDFs, queried here for cited answers. The **house code library** is the group's own importable functions, covered by a section in `CLAUDE.md` and never queried by this skill.
+
 ## When to invoke
 
 **Only on explicit request.** Unlike `/ask-knowledge`, never call this on your own initiative: every query costs real money at an LLM provider, whereas reading `knowledge/` is free. The user starts it deliberately.

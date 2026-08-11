@@ -39,7 +39,7 @@ The closest document decides local working details. No sub-project file may weak
 | a lesson about how we work (a pitfall, a procedure, a tool trap) | `knowledge/learnings/`; if it is a repeatable process error, `40_error_catalog.md` may be extended without asking |
 | a rule that must hold from now on | the appropriate `CLAUDE.md`, as one line, at the level where it applies |
 
-Two failure modes this table prevents: the project file slowly turning into a diary, and a lesson being filed somewhere that is not open at the moment it would be needed.
+Two failure modes this table prevents: the project file slowly turning into a diary, and a lesson being filed somewhere that is not open at the moment it would be needed. The first row is the one used daily; how to fill it, and how it divides against a paper lab book, is in `06_labbook.md`.
 
 ## Working in subfolders
 

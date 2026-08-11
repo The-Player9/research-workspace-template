@@ -2,9 +2,39 @@
 
 Versions of the **framework**, meaning the rule set and the skills, not of any workspace built from it.
 
-This file is what makes an update deliverable. `/init-workspace` writes the version into the marker at the top of your `CLAUDE.md`; on a later run it compares that version against this file and proposes only what changed since. Without the marker and without this changelog, a template can be copied but never updated.
+This file is what makes an update deliverable. `/init-workspace` writes the version into the marker at the top of your `CLAUDE.md`, and `/update-workspace` compares that version against **this file in a fresh copy of the template**, then proposes only what changed since. The copy inside your own workspace is your instance's log and froze at setup; comparing against it finds nothing, which is the defect fixed in 0.1.4.
 
 Each entry states what a user must **decide**, not only what moved. Format: `Added` / `Changed` / `Removed`, with the affected file in brackets.
+
+Every release carries the git tag `v<version>`, which is how `/update-workspace` reconstructs the state your workspace started from. A fork that drops the tags still updates, on a weaker test; keep them if you can.
+
+## 0.1.4 — 2026-08-11
+
+**Added** [`.claude/commands/update-workspace.md`, `knowledge/learnings/06_labbook.md`, `README.md`]
+
+- Updating is now its own skill, `/update-workspace`. It reads the version marker, obtains a current copy of the template, and repeats no setup question.
+- Changes are sorted by **conflict, not by importance**. A file still identical to the state shipped at the user's own version is updated without asking and listed in the report; only a file the user edited becomes a question. `CLAUDE.md` and `40_error_catalog.md` are compared rule by rule instead of as a whole, because init and daily use guarantee they differ.
+- The `Decide` paragraph of each entry is no longer a gate. It is written into the workspace as a dated TODO, in the project it concerns, and so are rejected changes together with the user's reason. A decision that only appeared in the chat was a decision nobody made.
+- Three modes: the default above, `--review` for the older behaviour of asking about everything, and `--dry-run` for a report that changes nothing.
+- The marker gains a `source:` field naming the repository the workspace came from, so a fork updates from its own origin. A marker without the field is completed on the first update run.
+- Releases are tagged `v<version>`, retroactively back to `v0.1.0`. The tag is what makes "has the user edited this file since their own version" an exact question rather than an inferred one.
+- `06_labbook.md` documents the store people write into daily: what an entry contains, why a correction is a new entry rather than an edit, what belongs in `CLAUDE.md` instead, and how the file stands next to a paper lab book kept at the bench.
+- The README gains three sections users asked for: how to update, directly below the quickstart; how the lab book is used and divided against a paper one; and a table separating the house **code** library from the literature collection.
+
+**Changed** [`CLAUDE.md`, `.claude/commands/init-workspace.md`, `.claude/commands/ask-literature.md`, `knowledge/learnings/00_INDEX.md`, `templates/subproject_Laborbuch.md`]
+
+- `/init-workspace` refuses to run on an initialised workspace and points to the update skill. Its old step 5 is gone, so one skill no longer holds two state machines.
+- Init question 7 asks about an "own code library" and question 8 about a search over other people's papers. Both now state what they are not.
+
+**Why:** the update path could not work as shipped. Step 5 of `init-workspace` compared the marker against `CHANGELOG.md`, meaning the copy inside the user's own workspace, which freezes at setup and additionally receives an init line. The comparison ran against the very file the marker came from and could never report a difference, and no document said where a newer version should come from. The naming did the rest: users who had finished setting up did not want to run a command called `init` on their workspace, and there was nothing else to run. The library wording failed the same way, by using one word for a code package and for a PDF collection, so the second init question read as a repeat of the first.
+
+The rule-by-rule design was itself a second obstacle. It treated every change as a decision, although two different approvals were hiding in one prompt: permission to change a rule file, which is mechanical and safe wherever the file is untouched, and the follow-up work on the user's own material, which no tool can do and which the skill only ever displayed. Gating the first on the second made a routine update expensive, and an expensive update is skipped, after which the workspace drifts from the framework it claims to follow. Splitting the two makes bulk updating safe: the mechanical half runs, and the human half is recorded as an obligation instead of scrolling past in a chat.
+
+**Decide, if you are updating from 0.1.3:** decide where your reference copy lives, a permanent clone next to the workspace or a throwaway one per update, and whether the `source:` URL points at this repository or at your own fork. If you keep a paper lab book, read `06_labbook.md` and settle the boundary explicitly, then write one line into each project `CLAUDE.md` saying which half of the record is on paper. That decision cannot be derived from your files, and getting it wrong produces two divergent accounts of the same experiment.
+
+**Not done, deliberately:** the module identifiers `HOUSE_LIB` and `LITERATURE_RAG` keep their names, although `CODE_LIB` and `LITERATURE_COLLECTION` would read better. They stand in the marker of every existing workspace, and renaming them would invalidate those markers to fix wording that only ever appears in prose. The clarification therefore sits in the visible text, not in the identifiers.
+
+**Still open, and known:** the marker has no list of declined changes, so a rejection survives only as the TODO line written in step 7. A later run cannot yet tell "not yet" from "deliberately never", and it raises the version marker even when something was declined.
 
 ## 0.1.3 — 2026-08-07
 

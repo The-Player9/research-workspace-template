@@ -1,5 +1,5 @@
 <!-- TEMPLATE SKELETON — these are NOT active rules for the surrounding workspace. Placeholders are filled by /init-workspace when this repo is used as a workspace of its own. -->
-<!-- workspace-framework: 0.1.3 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} -->
+<!-- workspace-framework: 0.1.4 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} | source: https://github.com/The-Player9/research-workspace-template -->
 
 # Research Workspace — Parent CLAUDE.md
 
@@ -26,7 +26,7 @@ How these files relate, what is loaded when, and where a given piece of informat
 
 ### Rules
 
-- **Writing:** day-to-day notes go into `Laborbuch.md`, **not** into `CLAUDE.md`; newest entry on top. The lab book is **updated without asking on every piece of news**: a new analysis, a new finding, a correction of an older one, a methodological pitfall, a discarded approach and why. Once something becomes a stable conclusion or decision, condense it **briefly** into `CLAUDE.md`; the detail stays in the lab book.
+- **Writing:** day-to-day notes go into `Laborbuch.md`, **not** into `CLAUDE.md`; newest entry on top. The lab book is **updated without asking on every piece of news**: a new analysis, a new finding, a correction of an older one, a methodological pitfall, a discarded approach and why. Once something becomes a stable conclusion or decision, condense it **briefly** into `CLAUDE.md`; the detail stays in the lab book. What an entry contains, why a correction is a new entry rather than an edit, and how this file stands next to a paper lab book → `knowledge/learnings/06_labbook.md`, **read once at setup**.
 - **Reading:** before substantive work on a sub-project, read its `CLAUDE.md` first; pull `Laborbuch.md` only when the history is needed.
 - **New sub-projects:** run `/new-subproject` → `knowledge/learnings/50_new_subproject.md`, **read and follow it every time**.
 - **Precedence on conflict:** the closest `CLAUDE.md` decides local working details; no sub-project file may weaken the workspace-wide rules (portability, knowledge-first, edit-don't-append, citation rules). Deliberate deviations must be marked as exceptions there and justified.
@@ -74,9 +74,9 @@ Conventions for **every** scientific text. Fill these in for your own venue; the
 {{/IF}}
 
 {{#IF HOUSE_LIB}}
-## House library `{{LIB_NAME}}`
+## House code library `{{LIB_NAME}}`
 
-Own helper library (`import {{LIB_IMPORT}}`). For matching code tasks, **check first whether a `{{LIB_NAME}}` function already exists** instead of writing something new. Keep its API reference in `knowledge/{{LIB_NAME}}.md` up to date when the library changes.
+Own **code** library (`import {{LIB_IMPORT}}`), meaning functions written in this group. Not to be confused with the literature collection, which holds papers written by other people and is queried with `/ask-literature`. For matching code tasks, **check first whether a `{{LIB_NAME}}` function already exists** instead of writing something new. Keep its API reference in `knowledge/{{LIB_NAME}}.md` up to date when the library changes.
 {{/IF}}
 
 ## Knowledge system
@@ -89,11 +89,12 @@ Defined in `.claude/commands/<name>.md`.
 
 | Skill | Purpose |
 |-------|---------|
-| `/init-workspace` | Sets this workspace up, or updates it to a newer framework version. |
+| `/init-workspace` | Sets this workspace up. Runs once; refuses to run again. |
+| `/update-workspace` | Brings this workspace to a newer framework version: untouched rule files updated and reported, edited ones asked about, follow-up decisions written down as TODOs. |
 | `/new-subproject` | Creates a sub-project: symlink, empty `Laborbuch.md`, `CLAUDE.md` header block. |
 | `/sync-knowledge` | Scans project directories, updates `knowledge/projects/` and `INDEX.md`. |
 | `/ask-knowledge` | Cross-project lookup in `knowledge/`; may be called autonomously. |
 | `/review-adversarial` | Reviewer-2 pass over a manuscript, in a fresh context. |
 {{#IF LITERATURE_RAG}}
-| `/ask-literature` | Literature RAG query (external service, incurs cost, explicit request only). |
+| `/ask-literature` | Question answered from the literature collection, meaning other people's papers (external service, incurs cost, explicit request only). |
 {{/IF}}
