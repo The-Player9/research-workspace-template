@@ -25,6 +25,8 @@ Archive of **repeatable process errors** in this workspace: what happened, why, 
 
 The catalogue keeps the incident and the reasoning; the active rule lives where it applies. If a countermeasure fits none of these places, say so explicitly in the entry, so it remains visible that it exists only in the archive.
 
+**When you write the countermeasure, grep for the instruction it replaces.** The same demand is often stated in two files, and the copy nobody edited outlives the correction. A skill that still asks for what the rule file no longer asks for will reinstate the error during review.
+
 ## What does not belong here
 
 Scientific mistakes (a wrong model, a bad assumption) go into the project's `Laborbuch.md` and, if they generalise, into `knowledge/`. This file is only about **how the work is organised**: things forgotten, files not read, steps skipped, tools misused.

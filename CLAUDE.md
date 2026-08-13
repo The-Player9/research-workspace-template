@@ -1,5 +1,5 @@
 <!-- TEMPLATE SKELETON — these are NOT active rules for the surrounding workspace. Placeholders are filled by /init-workspace when this repo is used as a workspace of its own. -->
-<!-- workspace-framework: 0.1.4 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} | source: https://github.com/The-Player9/research-workspace-template -->
+<!-- workspace-framework: 0.1.5 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} | source: https://github.com/The-Player9/research-workspace-template -->
 
 # Research Workspace — Parent CLAUDE.md
 
@@ -40,6 +40,14 @@ Answer **first** from documented sources: `knowledge/`, sub-project `CLAUDE.md`,
 
 Make changes by replacing or shortening existing text first, not by appending; keep the edit as small as possible. New text only where the content is genuinely new (lab-book entries, new citations, new work packages).
 
+## Critical Rule: Analysis Stance
+
+**Gate:** applies when a task is underdetermined or when a correction would be expensive, **including execution orders**. It is skipped for closed tasks: factual questions, calculations, small clearly bounded changes, and anything whose analysis already happened earlier in the same session.
+
+**The check, before the answer is written:** (i) which assumption has to hold for the answer to stand; (ii) what is missing from the context that would overturn it; (iii) which option the question silently excluded, and whether that exclusion was justified; (iv) which concrete finding would refute it.
+
+**Output:** the answer first, the check after it, at most three points, open assumptions written as statements rather than as rhetorical questions. No aphorisms, no commentary about the thinking itself. If there is nothing substantive to question, the block is dropped entirely: empty scepticism is worse than none. A premise held to be wrong is named once, clearly, and the question is answered anyway; no reframing in place of an answer. A deliberately narrow frame is respected.
+
 ## Rules in sub-projects
 
 Apply to **every** sub-project; stated only here, not duplicated in the project files.
@@ -64,7 +72,8 @@ Conventions for **every** scientific text. Fill these in for your own venue; the
 - Spelling: {{SPELLING}}. Citation style: {{CITATION_STYLE}}. Format: {{DOC_FORMAT}}.
 - **One main thought per sentence**, in every text type, papers as much as proposals. No multiply subordinated constructions; two sentences beat one sentence with two subordinate clauses. A longer sentence carries no more information, it spreads the same information over more words. Set a concrete target length in words and record it here, because a rule without a number does not survive a long drafting session.
 - **No filler sentences.** Cut anything that only announces, transitions, or asserts that something is important, and keep the substance as a statement of its own. Test: delete the sentence; if the text does not lose a claim about the subject matter, it stays deleted. A frame sentence that does carry a finding is rewritten to state the finding, not kept as a frame.
-- **Grade interpretations honestly.** Measured things as findings, inferred things with hedging ("it is assumed", "likely", "consistent with", "cannot be conclusively explained").
+- **Grade interpretations honestly.** Measured things as findings, inferred things with hedging ("it is assumed", "likely", "consistent with", "cannot be conclusively explained"). Your own uncertainty about the content does not belong in the wording. State it as an assumption in the text ("written under the assumption that X") or ask the user: a named assumption can be checked, a softened sentence cannot.
+- **State the important points outright.** The objective, the criterion, the result and the deliverable stand as a main clause whose subject is the thing itself, not as an interpretation of a measured quantity. Supporting quantities come afterwards and guard against confounders. Hedging belongs to the **interpretation of a result**, never to a commitment. Test: quote the sentence carrying the section's main claim verbatim; if you have to paraphrase, it is not in the text.
 - **Citations are content-bound**, never by author name and never as a bare bundled citation: attach each `\cite{}` to a specific claim named in the sentence.
 - **Cite only published or preprinted work.** Unpublished own manuscripts are mentioned in the text and shown as a figure, without a citation.
 - **Pipeline:** numbers final → storyline (decided by the user) → draft section by section → citation check → `/review-adversarial` in a fresh context → final pass by the user. Details → `knowledge/learnings/30_paper_kickoff.md`, **read before the first draft**.

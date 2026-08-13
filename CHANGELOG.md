@@ -8,6 +8,29 @@ Each entry states what a user must **decide**, not only what moved. Format: `Add
 
 Every release carries the git tag `v<version>`, which is how `/update-workspace` reconstructs the state your workspace started from. A fork that drops the tags still updates, on a weaker test; keep them if you can.
 
+## 0.1.5 — 2026-08-13
+
+**Added** [`CLAUDE.md`]
+
+- A fourth core rule, "Analysis Stance". Before answering an underdetermined question, or one whose correction would be expensive, name the assumption the answer rests on, what is missing that would overturn it, the option the question silently excluded, and the finding that would refute it. The answer comes first and the check follows it, at most three points, and the block is dropped entirely when there is nothing substantive to say.
+- The gate sits on underdetermination rather than on the type of request, and execution orders are explicitly included. Tasks whose analysis already happened earlier in the same session count as closed, which is the one calibration the rule needed in use.
+
+**Changed** [`CLAUDE.md`, `knowledge/learnings/30_paper_kickoff.md`, `knowledge/learnings/40_error_catalog.md`, `.claude/commands/review-adversarial.md`]
+
+- The writing conventions gain a rule of their own: state the important points outright. Objective, criterion, result and deliverable are main clauses about the thing itself, not interpretations of a measured quantity. Supporting quantities follow behind them and guard against confounders.
+- The honest-gradation rule now says where the author's own uncertainty goes: into a named assumption in the text, or into a question to the user, never into a softer sentence. An assumption can be checked, a hedge cannot.
+- The storyline gains one line per section, and per objective or work package in a proposal, naming its claim, its criterion and its deliverable. A slot that cannot be filled in one sentence marks a decision nobody has made yet.
+- `review-adversarial` adds a mechanical test to its first axis: quote the sentence carrying the objective, criterion or result verbatim. A claim that needs a paraphrase, or that has to be inferred from two supporting quantities, is a blocker rather than a style remark.
+- The error catalogue adds one step to its own procedure: when writing a countermeasure, grep for the instruction it replaces.
+
+**Why:** a criterion was written as two supporting quantities plus a sentence interpreting them, so the point itself, that the method needs fewer experiments than before, stood nowhere as a statement. The cause is a hedging reflex. A direct claim of success sounds like a promise, so it gets decomposed into something neutrally measurable and an interpretation, and the honest-gradation rule then supplies the excuse: the hedging migrates off the result and onto the statement. Underneath sits a plainer mechanism. Hedged writing is usually the symptom of an undecided question, and where it is open which quantity carries the claim, both appear as interpretations and neither as a statement. A rule alone does not fix this, because under uncertainty the vague wording is always the locally cheaper choice, and a vague sentence is rarely marked wrong. What bites is the storyline slot, which forces the decision before the sentence exists, and the verbatim-quote test, which cannot be satisfied by polishing. The catalogue step comes from the same episode: the review skill was still asking for a number that the rule file had dropped six days earlier, and nobody looked because the countermeasure had been written once already.
+
+**Why the stance rule is a core rule and not an example:** it decides whether other rules get applied, so it cannot sit in a file that is only read once someone has already classified the task. That is also why it is not a module behind a setup question. A rule its author considers generally right for research work should not be opt-in, and the two rules already in the core, knowledge-first answering and edit-don't-append, are unconditional for the same reason. It was run for two days in the authoring workspace before shipping, which was long enough to find one miscalibration, not long enough to prove the benefit; the honest statement is that it rests on judgement in use rather than on a measured case. The cost is visible and real: 172 words, close to 11 per cent, in a file that is loaded in every session and whose own rule says to keep it lean.
+
+**Decide, if you are updating from 0.1.4:** take the last section you wrote and try to quote its main claim verbatim. If you have to paraphrase, the decision behind it is still open; make it, and write it into the storyline before you touch the text. Decide separately whether hedged wording in your drafts is a style habit or a symptom of open questions, because only the second is fixed by the storyline slot, and the answer differs between groups. For the stance rule, decide how it sits next to the closeout pass: both append a block to the end of an answer, and if your answers routinely carry two, one has to absorb the other. If you do not want the block at all, delete the rule rather than weakening it, because a stance that applies sometimes is not one.
+
+**Not done, deliberately:** the framework does not require a sentence from the author per objective before drafting. It is the strongest anchor available, but it demands the decision at the moment when the claim of a new objective is often still forming, and what it produces then is a placeholder the draft will follow faithfully. The cheaper trigger, stopping after the second style round on the same paragraph and asking for that one sentence instead of writing a third version, stays a habit rather than a rule, because no rule can count those rounds reliably.
+
 ## 0.1.4 — 2026-08-11
 
 **Added** [`.claude/commands/update-workspace.md`, `knowledge/learnings/06_labbook.md`, `README.md`]

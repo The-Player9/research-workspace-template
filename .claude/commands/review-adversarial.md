@@ -18,7 +18,7 @@ Read the manuscript plus the number basis (`Output.txt`, derived data). **Not** 
 
 Be concrete on each (section, line, number), never generic:
 
-1. **Core claim** — is it in one sentence in the abstract, and do the shown data carry it? Where is the gap between claim and evidence?
+1. **Core claim** — is it in one sentence in the abstract, and do the shown data carry it? Where is the gap between claim and evidence? **Run the same test per section or objective, mechanically:** quote the sentence that carries its objective, criterion or result verbatim. If that needs a paraphrase, or if the claim has to be inferred from two supporting quantities, it is not in the text. Treat this as a blocker, not as a matter of style.
 2. **Numbers** — does every reported number have a data basis? Do text, table and figure agree? Are spread, n and units given? Is a precision claimed that the method cannot deliver?
 3. **Methods** — is the procedure described well enough to reproduce? Are calibrations, reference measurements or parameter values missing? Which assumption is left unstated?
 4. **Alternative explanations** — which other cause explains the finding equally well, and is it excluded? This is the most common reason for rejection; be sharpest here.

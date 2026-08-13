@@ -6,7 +6,7 @@ Applies to every scientific text: paper, proceeding, grant proposal, cover lette
 
 **0. Numbers final.** No drafting before the reported values are stable and reproducible from stored data (see [20_reproducibility.md](20_reproducibility.md)). Text written around numbers that later move has to be rewritten, and the rewrite is where inconsistencies survive.
 
-**1. Storyline, decided by the user.** A short `storyline.md`: the claim, the evidence for it in order, what is deliberately left out. This is a human decision, not a drafting step. Everything downstream inherits it.
+**1. Storyline, decided by the user.** A short `storyline.md`: the claim, the evidence for it in order, what is deliberately left out, and one line per section (per objective or work package in a proposal) naming its claim, its criterion and its deliverable. If one of the three cannot be said in a single sentence, the decision behind it is still open, and the draft will spread it over supporting quantities instead of stating it. This is a human decision, not a drafting step. Everything downstream inherits it.
 
 **2. Draft, section by section.** One section at a time, each reviewed before the next begins. Drafting the whole text in one pass produces a document whose middle contradicts its own introduction.
 
@@ -33,6 +33,7 @@ Answer before step 1, because each answer constrains the storyline:
 ## Recurring traps
 
 - A style word that can name both a format and a register will be read as a register instruction. "Prose" meant "not a bullet list" and was read as "write in a flowing style", which is where transition and announcement sentences come from. Pin such a word to one reading when you write it into a `CLAUDE.md`.
+- A sentence hedges because a decision is missing, not because the author lacks nerve. Where it is undecided which of two quantities carries the claim, both appear as interpretations and neither as a statement. Settling the question is what makes the sentence direct; a style pass on an undecided sentence only polishes the evasion.
 - A style rule stated for one text type is applied to that type only. A rule against long sentences that sits under "proposals" leaves the papers untouched, even when the same sentences were the problem there. Rules about sentences belong in the section that covers every text type.
 - A text block moved from an earlier manuscript brings its old framing; reread its first and last sentence in the new context.
 - Conclusions written before the discussion tend to claim more than the results section supports.
