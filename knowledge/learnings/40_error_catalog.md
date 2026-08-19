@@ -23,7 +23,9 @@ Archive of **repeatable process errors** in this workspace: what happened, why, 
 - A situational rule → a checklist item in the responsible learnings file.
 - A rule bound to one folder → a guard-rail `CLAUDE.md` in that folder.
 
-The catalogue keeps the incident and the reasoning; the active rule lives where it applies. If a countermeasure fits none of these places, say so explicitly in the entry, so it remains visible that it exists only in the archive.
+The catalogue keeps the incident and the reasoning; the active rule lives where it applies. If a countermeasure fits none of these places, say so explicitly in the entry, so it remains visible that it exists only in the archive. Before filing an entry as archive-only, name the moment at which the question would come up again; rare is not the same as unpredictable, and an entry with a standing anchor belongs at that anchor.
+
+The change to the rule itself is logged in [70_changes.md](70_changes.md), sorted by rule and date. That log is what later allows a rule text to drop the `(incident YYYY-MM-DD → 40_error_catalog.md)` reference without losing its occasion. Give the date in such a reference, and the keyword too where one date carries two entries.
 
 **When you write the countermeasure, grep for the instruction it replaces.** The same demand is often stated in two files, and the copy nobody edited outlives the correction. A skill that still asks for what the rule file no longer asks for will reinstate the error during review.
 

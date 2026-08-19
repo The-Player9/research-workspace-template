@@ -1,5 +1,5 @@
 <!-- TEMPLATE SKELETON — these are NOT active rules for the surrounding workspace. Placeholders are filled by /init-workspace when this repo is used as a workspace of its own. -->
-<!-- workspace-framework: 0.1.5 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} | source: https://github.com/The-Player9/research-workspace-template -->
+<!-- workspace-framework: 0.1.6 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} | source: https://github.com/The-Player9/research-workspace-template -->
 
 # Research Workspace — Parent CLAUDE.md
 
@@ -36,6 +36,8 @@ How these files relate, what is loaded when, and where a given piece of informat
 
 Answer **first** from documented sources: `knowledge/`, sub-project `CLAUDE.md`, code, manuscripts. If the information is not there, **say so explicitly** ("this is not in the project documentation") and mark your own knowledge as such ("from my general knowledge"). Never silently mix project facts and your own assumptions.
 
+The mark records **your** evidential state, not the state of the matter. When you set it, ask whether the user already has the point covered, and write the answer into the `Laborbuch.md`. Until that is settled the mark stays in the lab book. It must not travel into an outward-facing document: a literature-search prompt, a reviewer-objection list, a risk register. There it reads as a gap in the project rather than a gap in your sources.
+
 ## Critical Rule: Edit, Don't Append
 
 Make changes by replacing or shortening existing text first, not by appending; keep the edit as small as possible. New text only where the content is genuinely new (lab-book entries, new citations, new work packages).
@@ -53,7 +55,7 @@ Make changes by replacing or shortening existing text first, not by appending; k
 Apply to **every** sub-project; stated only here, not duplicated in the project files.
 
 - **Reading `knowledge/`:** read-only, consult before substantive tasks (knowledge-first). Entry point `knowledge/INDEX.md`; own project file `knowledge/projects/<name>.md`.
-- **Writing `knowledge/`:** only when explicitly asked, entries short (2–3 sentences per insight), timestamp in `INDEX.md` updated. **Single exception:** `knowledge/learnings/40_error_catalog.md` may be extended without asking whenever a repeatable process error shows up. Otherwise: project-specific notes, decisions and TODOs into the project `CLAUDE.md`, dated entries into `Laborbuch.md`. Sub-project `CLAUDE.md` files are **never** overwritten from the parent level.
+- **Writing `knowledge/`:** only when explicitly asked, entries short (2–3 sentences per insight), timestamp in `INDEX.md` updated. **Two exceptions:** `knowledge/learnings/40_error_catalog.md` may be extended without asking whenever a repeatable process error shows up, and `knowledge/learnings/70_changes.md` records every change to a rule file at the moment it is made. Otherwise: project-specific notes, decisions and TODOs into the project `CLAUDE.md`, dated entries into `Laborbuch.md`. Sub-project `CLAUDE.md` files are **never** overwritten from the parent level.
 - **Knowledge export (ask first):** do **not** enter export-worthy findings yourself; propose them (1–2 sentences plus the intended sink: `insights.md` scientific / `methods.md` technical). The user decides and comments; only then does the finding go, **together with that comment**, into the `## Knowledge Export` section at the end of the project `CLAUDE.md`, from where `/sync-knowledge` picks it up.
 - **Closeout pass:** at the end of every substantive task check — (i) lab-book entry written, (ii) do the results change numbers, status or TODOs in the project `CLAUDE.md`, (iii) export-worthy finding → export proposal (see above). State in one sentence which of these stores you deliberately did **not** touch, and why.
 - **Cross-project lookup:** call `/ask-knowledge` (also on your own initiative) as soon as a question reaches beyond the current sub-project. For published third-party literature use `/ask-literature` instead (explicit request only, incurs cost).

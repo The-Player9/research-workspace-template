@@ -60,7 +60,7 @@ Then sort each affected file:
 | File already identical to the reference | Nothing to do, not mentioned unless `--dry-run` |
 | File differs from its baseline | **Conflicted.** Goes to step 6 as a question |
 
-**`CLAUDE.md` is always conflicted at file level** and is never treated wholesale. Init filled its placeholders and dropped the blocks of inactive modules, so it has differed from the skeleton since the day it was written. Descend to rule level instead: for each change the entry describes, look for the **old rule text** in the user's file. Found unchanged, so the user never touched that rule, and the replacement is conflict-free. Altered or absent, so it becomes a question with the surrounding text shown. The same per-rule test applies to any file the user extends by design, `knowledge/learnings/40_error_catalog.md` above all.
+**`CLAUDE.md` is always conflicted at file level** and is never treated wholesale. Init filled its placeholders and dropped the blocks of inactive modules, so it has differed from the skeleton since the day it was written. Descend to rule level instead: for each change the entry describes, look for the **old rule text** in the user's file. Found unchanged, so the user never touched that rule, and the replacement is conflict-free. Altered or absent, so it becomes a question with the surrounding text shown. The same per-rule test applies to any file the user extends by design, `knowledge/learnings/40_error_catalog.md` and `knowledge/learnings/70_changes.md` above all. Neither gets an entry from this skill: they log the user's own rule history, while a framework update is logged by `CHANGELOG.md`.
 
 ## 5. Apply the conflict-free set
 

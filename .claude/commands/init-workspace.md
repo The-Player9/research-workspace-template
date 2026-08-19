@@ -43,7 +43,7 @@ What each answer switches on. `GRANTS` implies `PUBLISHING`; the grant bullet is
 
 | Module | Trigger | Files it brings |
 |---|---|---|
-| **core** (never optional) | — | `05_layout.md`, `06_labbook.md`, `40_error_catalog.md`, `50_new_subproject.md`, `00_INDEX.md`; skills `new-subproject`, `update-workspace`, `sync-knowledge`, `ask-knowledge`; `templates/subproject_*`, `templates/guardrail_CLAUDE.md` |
+| **core** (never optional) | — | `05_layout.md`, `06_labbook.md`, `40_error_catalog.md`, `50_new_subproject.md`, `70_changes.md`, `00_INDEX.md`; skills `new-subproject`, `update-workspace`, `sync-knowledge`, `ask-knowledge`; `templates/subproject_*`, `templates/guardrail_CLAUDE.md` |
 | `LONGRUNNERS` | Q5 yes | `10_longrunners.md` + the checkpointing rule in `CLAUDE.md` |
 | `PUBLISHING` | default yes, off only if the user says they do not publish | `20_reproducibility.md`, `30_paper_kickoff.md`, skill `review-adversarial`, the writing-conventions block |
 | `GRANTS` | Q4 role, or asked directly | `60_grant_proposal.md` + its bullet |
@@ -51,7 +51,7 @@ What each answer switches on. `GRANTS` implies `PUBLISHING`; the grant bullet is
 | `HOUSE_LIB` | Q7 yes | the house code library section, filled with the given name and import |
 | `LITERATURE_RAG` | Q8 yes | skill `ask-literature` + its row in the skills table |
 
-`40_error_catalog.md`, `05_layout.md` and `06_labbook.md` ship even in the leanest profile. The first carries the mechanism that keeps every other lesson from being filed where nobody reads it. The second is what makes the three levels of `CLAUDE.md` comprehensible at all. The third is the only file that explains the store people actually write into every day, and how it stands next to a paper lab book.
+`40_error_catalog.md`, `05_layout.md` and `06_labbook.md` ship even in the leanest profile. The first carries the mechanism that keeps every other lesson from being filed where nobody reads it. The second is what makes the three levels of `CLAUDE.md` comprehensible at all. The third is the only file that explains the store people actually write into every day, and how it stands next to a paper lab book. `70_changes.md` ships empty for the same reason as the catalogue: a rule whose occasion is written nowhere gets deleted as bureaucracy a year later.
 
 ## 3. Write the instance
 

@@ -36,6 +36,10 @@ Name the two or three risks that would actually change the outcome, each with a 
 
 Objectives are what the project will achieve, not what already holds. This is the most common overclaim in proposals, and it is also the easiest for a reviewer to check against the preliminary-work section.
 
+## AI-assistance declaration
+
+Funders increasingly ask what part of a proposal was written with model assistance, and the answer is a statement by the applicant. Do not derive it from the `Laborbuch.md`. The lab book records what was done, not how much of a text a model produced. A share inferred from it is a guess presented as a record. Ask the user for the wording, and check the current call document for what the funder actually requires.
+
 ## Local formatting
 
 Funder conventions (emphasis rules, section numbering, mandatory annexes, page budgets per section) vary and change between calls. Record them in the proposal project's own `CLAUDE.md`, not here, and check them against the current call document rather than the previous proposal.

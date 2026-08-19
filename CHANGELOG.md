@@ -8,6 +8,34 @@ Each entry states what a user must **decide**, not only what moved. Format: `Add
 
 Every release carries the git tag `v<version>`, which is how `/update-workspace` reconstructs the state your workspace started from. A fork that drops the tags still updates, on a weaker test; keep them if you can.
 
+## 0.1.6 — 2026-08-19
+
+**Added** [`knowledge/learnings/70_changes.md`, `CLAUDE.md`, `knowledge/learnings/00_INDEX.md`, `knowledge/learnings/05_layout.md`, `.claude/commands/init-workspace.md`, `.claude/commands/update-workspace.md`]
+
+- A rule log, `70_changes.md`, sorted by rule and date: what changed, where it now stands, why, and whether the rule text still carries its incident reference. It ships empty, like the error catalogue, and is the second file that may be written without asking.
+- The condition under which an incident reference may leave a rule text. Two things must hold: the rule states its own why in its own sentence, and it is settled, meaning confirmed once and applied once. Until then the reference stays, because a rule whose occasion is written nowhere gets deleted as bureaucracy a year later.
+- Three files that log different things are now separated in writing. The catalogue is sorted by incident and keeps the mechanism, the rule log is sorted by rule and also takes changes that came from a decision, and `CHANGELOG.md` records the template version you started from rather than what you changed afterwards.
+
+**Changed** [`CLAUDE.md`, `knowledge/learnings/30_paper_kickoff.md`, `knowledge/learnings/40_error_catalog.md`, `knowledge/learnings/60_grant_proposal.md`, `README.md`]
+
+- Knowledge-first answering now says what the mark means. "From my general knowledge" records the evidential state of whoever wrote it, not the state of the matter. Ask the user at the moment you set it, write the answer into the lab book, and keep the mark out of outward-facing documents while the question is open.
+- `30_paper_kickoff.md` carries the same point as a recurring trap, together with the grep that follows a resolved mark. The old wording survives in every file the sentence was copied into.
+- The AI-assistance declaration becomes a rule instead of a checklist word. The share is stated by the author and never estimated from the `Laborbuch.md`, in papers and in proposals alike. Proposals get a short section of their own, because funders ask for the declaration more often than journals do.
+- The catalogue gains a test before an entry is filed as archive-only: name the moment at which the question would come up again. Rare is not the same as unpredictable, and an entry with a standing anchor belongs at that anchor rather than in the archive. It also asks for the date in every reference to itself, since "see the error catalogue" resolves to nothing once the catalogue has grown.
+- The README lists the analysis stance as its sixth idea, three versions after it shipped as a core rule, and states the gate that makes it bearable. The update section moves behind the explanatory part: a first reader never needs it, and a returning user searches for it by name.
+
+**Why:** a mark that describes the writer's sources gets read as a property of the subject. In the authoring workspace nine lab-book entries carried it, and at least one crossed a project boundary into a literature-search prompt and a reviewer-objection list, where it stood as a gap in the project for twelve days. The user had checked the matter the whole time. The damage does not happen when the mark is set, which is the honest thing to do; it happens when a sentence carrying it is exported into a document written for someone else. The rule therefore sits at the export, not at the marking.
+
+The declaration rule comes from the same review and had been filed as archive-only, on the grounds that people rarely ask what share of a text a model wrote. That reasoning confuses rare with unpredictable. The question has two standing anchors, the disclosure item before submission and the funder declaration, and at both of them the tempting source is the lab book. A lab book records what was done, not how much of a text a model produced, so a share read off it is a guess wearing the clothes of a record.
+
+The rule log answers a smaller problem that only appears with time. Once the catalogue holds nine entries, a reference of the form "see the error catalogue" no longer resolves to anything, and every rule text that carries one costs space in a file read on each application. Dating the references fixes the resolution; the log is what lets them be removed altogether, since the occasion of a rule then has a place to live. This is the point of the two conditions: a rule that carries its own why does not need its history in the same line.
+
+**Decide, if you are updating from 0.1.5:** grep your own notes for the mark you use, and check which of those sentences have since been copied into a document someone else reads. For each one, decide whether the question is still open or was settled long ago without the wording being corrected. Decide next whether your rule log starts empty or is reconstructed from your catalogue; reconstruction takes an afternoon and pays off only if your rules are older than your incident records. Settle the AI-disclosure wording once per venue instead of per submission, and write it where the submission checklist is, not in the manuscript folder of a single paper.
+
+**Not done, deliberately:** the core rule keeps a binary mark and does not grade documented, inferred and assumed as three levels. The finer grade is defensible, and the authoring workspace uses it, but it costs another sentence in the file loaded every session. The failure this release fixes is about the export of a mark, not about its resolution, and the extra grade would not have prevented it.
+
+**Still open, and known:** unchanged from 0.1.4, the version marker cannot distinguish a change you declined from one you deferred. A rejection survives only as the TODO written when it happened, and the marker still advances.
+
 ## 0.1.5 — 2026-08-13
 
 **Added** [`CLAUDE.md`]

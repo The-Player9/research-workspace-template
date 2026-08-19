@@ -14,7 +14,8 @@ These files are **not** loaded automatically, which keeps every session cheaper.
 | [40_error_catalog.md](40_error_catalog.md) | incident archive: repeated process errors, their cause, and where the countermeasure went | rarely; when a known pitfall is suspected, or when adding a new incident |
 | [50_new_subproject.md](50_new_subproject.md) | procedure for creating a sub-project | on every `/new-subproject` |
 | [60_grant_proposal.md](60_grant_proposal.md) | additional rules for funding proposals: objective versus criterion versus means, work-package shape, risk section | before the first line of a proposal |
+| [70_changes.md](70_changes.md) | chronology of the rule changes in this workspace: what changed, where it stands now, why | whenever a rule changes, and when the occasion of an old rule is unclear |
 
-**Writing:** like `knowledge/`, only when explicitly asked, with one exception — `40_error_catalog.md` may be extended without asking as soon as a repeatable process error appears. Keep entries dated, short, and tied to a concrete countermeasure.
+**Writing:** like `knowledge/`, only when explicitly asked, with two exceptions — `40_error_catalog.md` may be extended without asking as soon as a repeatable process error appears, and `70_changes.md` is written at the moment a rule changes. Keep entries dated, short, and tied to a concrete countermeasure.
 
 **Every countermeasure is additionally written in compressed form where it takes effect.** Otherwise it sits in a file that is not open at the moment it is needed. Permanent rules become a line in the appropriate `CLAUDE.md`; situational rules become a checklist item in the responsible learnings file. The catalogue keeps the incident and the reasoning; the active rule lives at the place where it applies. If a countermeasure fits neither place, say so explicitly in the entry, so it stays visible that it exists only in the archive.

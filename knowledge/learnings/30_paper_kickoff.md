@@ -25,7 +25,7 @@ Answer before step 1, because each answer constrains the storyline:
 - **Which figures exist**, which are placeholders, and who produces the missing ones.
 - **Author list and contributions**, decided at the start rather than negotiated at submission.
 - **Data and code availability**: what is released, where, under what licence, and whether a DOI is needed before submission.
-- **AI-assistance declaration**: what the venue requires and what you will state.
+- **AI-assistance declaration**: what the venue requires and what you will state. The figure comes from the user, never from an estimate off the `Laborbuch.md`. The lab book records what was done, not how much of a text a model produced.
 - **Preprint policy** of the venue, and whether you intend to post one.
 - **Style anchor and length budget**: which existing text defines the register, and how many words each section gets. A per-section budget disciplines sentence structure, a total page count does not. For a text type the anchor does not cover, a proposal when the anchor is a paper, get a sample paragraph from the user before the first line.
 - **Known reviewer objections**: the two or three comparisons or controls a hostile reader will demand. Decide now whether to run them, and if not, why the paper stands without them.
@@ -35,6 +35,7 @@ Answer before step 1, because each answer constrains the storyline:
 - A style word that can name both a format and a register will be read as a register instruction. "Prose" meant "not a bullet list" and was read as "write in a flowing style", which is where transition and announcement sentences come from. Pin such a word to one reading when you write it into a `CLAUDE.md`.
 - A sentence hedges because a decision is missing, not because the author lacks nerve. Where it is undecided which of two quantities carries the claim, both appear as interpretations and neither as a statement. Settling the question is what makes the sentence direct; a style pass on an undecided sentence only polishes the evasion.
 - A style rule stated for one text type is applied to that type only. A rule against long sentences that sits under "proposals" leaves the papers untouched, even when the same sentences were the problem there. Rules about sentences belong in the section that covers every text type.
+- A mark such as "from my general knowledge" describes the evidential state of whoever wrote it. The next reader takes it for a gap in the project instead. Resolve the mark with the user before it enters an outward-facing document, and grep every project file once it is resolved. A sentence copied into a search prompt, a reviewer-objection list or a defect list keeps the old wording long after the question was settled.
 - A text block moved from an earlier manuscript brings its old framing; reread its first and last sentence in the new context.
 - Conclusions written before the discussion tend to claim more than the results section supports.
 - A limitation discovered late is easier to state plainly than to hide; reviewers find it either way, and a stated one costs less.

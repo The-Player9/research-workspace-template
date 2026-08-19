@@ -11,37 +11,14 @@ This is a **template repository**, not a library and not a framework with a supp
 3. Run `/new-subproject` for your first project.
 4. Work. Write findings into the project's `Laborbuch.md` as they happen; condense stable conclusions into its `CLAUDE.md`.
 
-## Already set up? Updating is `/update-workspace`
-
-**Run `/update-workspace`, never `/init-workspace` again.** Init runs exactly once per workspace and refuses a second run. The update skill asks none of the setup questions and re-chooses no module. It compares the version marker at the top of your `CLAUDE.md` against a fresh copy of this repository and brings the rule texts up to date.
-
-**Changes are sorted by conflict, not by importance.** A rule file you never edited is simply updated and listed in the report. You are asked only where you changed something yourself, which is usually a handful of places. Your `CLAUDE.md` is one of them by construction, because init filled it in, so it is compared rule by rule rather than as a whole and is never overwritten wholesale. Your lab books, your `knowledge/` base and your results are not touched at all. A framework update changes rules, never records.
-
-```
-/update-workspace                     apply what is safe, ask about the rest
-/update-workspace --review            ask about every change, one at a time
-/update-workspace --dry-run           report only, change nothing
-/update-workspace ~/rwt-upstream      use a copy you already have
-```
-
-**Workspaces set up before version 0.1.4 do not have the skill yet.** Copy it in once, then run it:
-
-```
-git clone https://github.com/The-Player9/research-workspace-template /tmp/rwt
-cp /tmp/rwt/.claude/commands/update-workspace.md <your-workspace>/.claude/commands/
-```
-
-Every changelog entry ends with a paragraph headed **"Decide, if you are updating from …"**. That is the part no tool can do for you, because it concerns your own proposals, drafts and records. It does not block the update. Instead it is written into your workspace as a dated TODO, in the project it belongs to, so it survives the session in which the update ran. Rejected changes are written down the same way, together with your reason.
-
-Do **not** merge this repository into your workspace with git. A workspace created with "Use this template" has no common ancestor with it, and a forced merge lands on exactly the files you own: your filled-in `CLAUDE.md`, your trimmed learnings index, your error catalogue.
-
-## The five ideas this encodes
+## The six ideas this encodes
 
 1. **Two memory files per project, not one.** `CLAUDE.md` holds the stable context and is loaded every session, so it must stay lean. `Laborbuch.md` holds the dated log: experiments, intermediate numbers, dead ends and why they failed. It is read only when the history is actually needed. Without this split the context file grows into a diary and becomes both expensive and unreadable.
 2. **Domain knowledge and process knowledge are different things.** `knowledge/` collects cross-project scientific findings; `knowledge/learnings/` collects how you work: recurring pitfalls, checklists, tool lessons. Every countermeasure is additionally written **where it takes effect**, otherwise the lesson sits in a file nobody opens at the moment it is needed.
 3. **Reported numbers must be reproducible.** Every number in a manuscript comes from a script run against a stored data file. The analysis lives in exactly three files: one that generates the expensive intermediates, one that produces every figure and writes `Output.txt` with the manuscript location of each number, and one with shared helpers.
 4. **Writing follows a fixed pipeline.** Numbers final, then a storyline decided by you, then section-by-section drafting, then a citation check, then an adversarial review in a fresh context, then your own final pass. The adversarial review is a separate step on purpose: the context that wrote the draft cannot see its own gaps.
 5. **Answer from documented sources first.** Project docs, code and manuscripts before model knowledge. If something is not documented, that gets said out loud, and general knowledge is marked as such. You must always be able to tell where a statement came from.
+6. **Name the load-bearing assumption before answering.** An underdetermined task gets a short check after the answer, and so does one whose correction would be expensive. The check names the assumption the answer rests on, what would overturn it, and the option the question silently excluded. In the authoring workspace it has caught errors before the answer was acted on, because the assumption is stated while the answer is still forming. The gate is what keeps it bearable: closed tasks skip the check, and where nothing substantive is at stake the block is dropped entirely.
 
 ## What you get
 
@@ -95,6 +72,30 @@ python evaluate.py     # Output.txt, every number labelled with where it appears
 The numbers in `examples/demo-project/CLAUDE.md` are the real output of those
 scripts, and its `Laborbuch.md` shows the shape of a working log: a result, a
 correction, and a dead end kept with its reason.
+
+## Already set up? Updating is `/update-workspace`
+
+**Run `/update-workspace`, never `/init-workspace` again.** Init runs exactly once per workspace and refuses a second run. The update skill asks none of the setup questions and re-chooses no module. It compares the version marker at the top of your `CLAUDE.md` against a fresh copy of this repository and brings the rule texts up to date.
+
+**Changes are sorted by conflict, not by importance.** A rule file you never edited is simply updated and listed in the report. You are asked only where you changed something yourself, which is usually a handful of places. Your `CLAUDE.md` is one of them by construction, because init filled it in, so it is compared rule by rule rather than as a whole and is never overwritten wholesale. Your lab books, your `knowledge/` base and your results are not touched at all. A framework update changes rules, never records.
+
+```
+/update-workspace                     apply what is safe, ask about the rest
+/update-workspace --review            ask about every change, one at a time
+/update-workspace --dry-run           report only, change nothing
+/update-workspace ~/rwt-upstream      use a copy you already have
+```
+
+**Workspaces set up before version 0.1.4 do not have the skill yet.** Copy it in once, then run it:
+
+```
+git clone https://github.com/The-Player9/research-workspace-template /tmp/rwt
+cp /tmp/rwt/.claude/commands/update-workspace.md <your-workspace>/.claude/commands/
+```
+
+Every changelog entry ends with a paragraph headed **"Decide, if you are updating from …"**. That is the part no tool can do for you, because it concerns your own proposals, drafts and records. It does not block the update. Instead it is written into your workspace as a dated TODO, in the project it belongs to, so it survives the session in which the update ran. Rejected changes are written down the same way, together with your reason.
+
+Do **not** merge this repository into your workspace with git. A workspace created with "Use this template" has no common ancestor with it, and a forced merge lands on exactly the files you own: your filled-in `CLAUDE.md`, your trimmed learnings index, your error catalogue, your rule log.
 
 ## Design constraints worth knowing
 
