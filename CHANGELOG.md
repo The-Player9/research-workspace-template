@@ -8,6 +8,26 @@ Each entry states what a user must **decide**, not only what moved. Format: `Add
 
 Every release carries the git tag `v<version>`, which is how `/update-workspace` reconstructs the state your workspace started from. A fork that drops the tags still updates, on a weaker test; keep them if you can.
 
+## 0.1.7 — 2026-10-05
+
+**Changed** [`CLAUDE.md`]
+
+- The closeout sentence names the stores that were touched as well as those deliberately left alone. A file counts as touched only if a write or edit to it ran in the same turn. Longer text goes into the file first and into the chat afterwards.
+- A new rule in "Rules in sub-projects": a number meant to tell cases apart goes into an outward-facing document only after the same calculation on close cases without the effect stays unremarkable. It applies to separation, not to a before-and-after test such as an ablation, which needs its comparison but no negative cases.
+- A new writing convention for revisions: the response letter quotes the changed manuscript text verbatim at each location, and answers the core of the comment without causes nobody asked about.
+
+**Why:** the closeout sentence was produced as a closing formula, in the same motion as the summary, and so described the intended filing rather than the executed one. In the authoring workspace it reported a paragraph as written into a file and a lab-book entry as made; neither existed, and the paragraph stood only in the chat. The old wording asked only for the stores left untouched, so the false half of the sentence was the half nobody had to check. Writing to the file before showing the text removes the order in which the file step becomes optional.
+
+The separation rule comes from a report to a journal editor. A binomial p-value of 3e-26 stood as the chance that an unrelated paper would match this well. Honest pairs on closely related topics, computed only afterwards, reached 2e-34: the null model was wrong, and the spectacular value had become the headline before any control existed. The error was caught before sending. The rule is restricted to separation because that is where a positive case alone proves nothing; a significance test against a previous state already contains its comparison.
+
+The response-letter rule is a decision rather than an incident. Describing a change makes the reviewer search for it, and an unrequested list of side causes reads as defence rather than as an answer.
+
+**Size:** the rendered core grows by 81 words in the leanest profile and by 142 with publishing enabled, about 7 and 8 per cent of the file loaded in every session.
+
+**Decide, if you are updating from 0.1.6:** check whether any number in a document you have already sent claims to separate cases without having been computed on cases that should not separate. For the response-letter rule, check your venues: some journals prescribe a letter format with line references instead of quotes, and the venue wins.
+
+**Not done, deliberately:** checking merged counts from several runs for duplicates was part of the same incident, but it is a separate error and stays in the authoring workspace's catalogue rather than in the core file. Two revision habits from the same workspace also stay out: moving a discussed point into manuscript and letter in one step, and giving the editor facts only. Both are sound, but they were set in one project and have not been applied in a second one.
+
 ## 0.1.6 — 2026-08-19
 
 **Added** [`knowledge/learnings/70_changes.md`, `CLAUDE.md`, `knowledge/learnings/00_INDEX.md`, `knowledge/learnings/05_layout.md`, `.claude/commands/init-workspace.md`, `.claude/commands/update-workspace.md`]
