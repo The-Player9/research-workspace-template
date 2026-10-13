@@ -22,4 +22,4 @@ Lesson for the workspace, not just this project: a silently skipped input is wor
 
 Wanted per-parameter confidence intervals and implemented a bootstrap over the training split. Dropped it again: with a deterministic generator the seed-to-seed spread already measures the same quantity, the two agreed to within 3 % on a test case, and the bootstrap pulled a resampling dependency into `evaluate.py`, which is supposed to run anywhere in seconds.
 
-Not deleted, parked: as soon as the data are real and seeds stop being repeatable, the bootstrap is the right tool. Recorded in `CLAUDE.md` under "Parked" with the reason, so it is not rediscovered from scratch.
+Not deleted, parked: as soon as the data are real and seeds stop being repeatable, the bootstrap is the right tool. Recorded in `Todo.md` under "Parked" with the reason, so it is not rediscovered from scratch.

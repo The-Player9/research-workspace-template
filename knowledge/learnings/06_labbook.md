@@ -16,7 +16,6 @@ The split from `CLAUDE.md` is a cost decision, explained in `05_layout.md`: the 
 - **Corrections as new entries.** When an older result turns out to be wrong, write a new dated entry that says so and why. Do **not** edit the old one. This is the one place where the workspace-wide rule "edit, don't append" does not apply: the record of what you believed on a given date is itself data, and a paper defence needs it.
 - **Dead ends with the reason they were dropped.** This is the most valuable and most often omitted category. Without it the same approach is tried twice, once by you in a year and once by the next person.
 - **Methodological pitfalls** the moment they cost you time.
-- **Running TODOs**, which move out again as soon as they are done.
 
 ## What does not belong in it
 
@@ -26,6 +25,7 @@ The split from `CLAUDE.md` is a cost decision, explained in `05_layout.md`: the 
 | the current canonical number a manuscript will report | the project `CLAUDE.md`, reproducible by the documented script |
 | a finding other projects would benefit from | proposed as a knowledge export, decided by the user |
 | a lesson about how we work rather than about the science | `knowledge/learnings/`, and `40_error_catalog.md` if it is a repeatable process error |
+| a work step still to be done | the project `Todo.md`; once done it is deleted there and, if it produced something, recorded here. Open work inside a long log gets overlooked |
 
 The failure this table prevents is the project `CLAUDE.md` slowly turning into a diary, which makes every future session more expensive and the current state harder to find.
 
@@ -35,7 +35,7 @@ Same function, different medium, and in most groups both exist. The digital lab 
 
 Four rules keep them from contradicting each other:
 
-- **Each observation lives in exactly one of the two.** Duplicated entries drift apart, and then neither can be trusted. This is the same argument that gives this framework four stores rather than five.
+- **Each observation lives in exactly one of the two.** Duplicated entries drift apart, and then neither can be trusted. This is the same argument that keeps each kind of information in exactly one of this framework's stores.
 - **Cross-reference at the boundary.** Where a measurement is taken on paper and evaluated on the computer, the digital entry names the paper book and page, and the paper entry names the project folder and the date. A number whose trail breaks at the boundary is not reproducible, no matter how carefully each half was kept.
 - **A digital lab book does not replace a legally required one.** Where your institute, good laboratory practice, or patent evidence requires a bound, paginated and countersigned book, keep it. This file is a working log, not a legal record. Treat the digital book as the analysis half and say so in the project `CLAUDE.md`, so nobody assumes the paper trail is complete.
 - **Purely computational projects have no split.** Then the digital book is the whole lab book, and the rules above collapse to the first section of this file.

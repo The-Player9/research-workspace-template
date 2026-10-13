@@ -4,7 +4,7 @@ Two things that are easier to show than to describe. Neither is loaded as contex
 
 ## `demo-project/`
 
-A sub-project as it looks after a few weeks of work: a filled `CLAUDE.md` with a canonical results table, a `Laborbuch.md` with a result, a correction and a dead end, and a runnable three-file analysis.
+A sub-project as it looks after a few weeks of work: a filled `CLAUDE.md` with a canonical results table, a `Laborbuch.md` with a result, a correction and a dead end, a `Todo.md` with one open step and the parked dead end, and a runnable three-file analysis.
 
 The data are synthetic, but **the numbers in `CLAUDE.md` are real output of the shipped scripts**. Reproduce them in about a second:
 

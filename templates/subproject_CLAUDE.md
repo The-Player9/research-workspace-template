@@ -5,7 +5,7 @@
 Shared base via symlink `knowledge/ → ../knowledge` (read-only). Own project file: `knowledge/projects/{{PROJECT_NAME}}.md`. Rules (reading, writing, knowledge export, `/ask-knowledge`) → parent `CLAUDE.md`, "Rules in sub-projects".
 
 ## Lab book
-Dated entries, experiment logs and running notes → `Laborbuch.md`, not in this file, which stays lean.
+Dated entries, experiment logs and running notes → `Laborbuch.md`, not in this file, which stays lean. Open work steps → `Todo.md`; open decisions stay here.
 
 ## Overview
 
@@ -27,13 +27,9 @@ _Which script regenerates the numbers reported below, and from which stored data
 
 _The canonical numbers. This section, not the lab book, is the source of truth for what is currently true. Every value here must be reproducible via the command above._
 
-## Open work
+## Open decisions
 
-- [ ] _active items_
-
-### Parked
-
-> _Items deliberately not being worked on, with the reason. Parked is not deleted: the reason is often the finding._
+- [ ] _Decisions only the user can make, dated. Work steps go into `Todo.md`._
 
 ## Knowledge Export
 

@@ -19,6 +19,7 @@ The reason the third level exists: a rule that sits on line 200 of a long projec
 | Parent `CLAUDE.md` | every session |
 | Sub-project `CLAUDE.md` | when working in that project |
 | Guard-rail `CLAUDE.md` | when touching files in that folder |
+| `Todo.md` | read with the sub-project `CLAUDE.md` before substantive work, by rule rather than automatically |
 | `Laborbuch.md` | only when explicitly read |
 | `knowledge/`, `knowledge/learnings/` | only when explicitly read |
 
@@ -34,6 +35,8 @@ The closest document decides local working details. No sub-project file may weak
 |---|---|
 | a dated observation, an experiment log, a failed attempt and why | the project's `Laborbuch.md`, **without asking** |
 | a stable conclusion or decision derived from the above | condensed into the project's `CLAUDE.md`; the detail stays in the lab book |
+| a work step still to be done, or one parked with its reason | the project's `Todo.md`; deleted there once done, with a dated lab-book entry |
+| a decision only the user can make | the project's `CLAUDE.md`, under open decisions |
 | a current number that a manuscript will report | the project's `CLAUDE.md`, "Current results", reproducible by the documented script |
 | a finding that other projects would benefit from | proposed as a knowledge export; the user decides and comments, only then does it enter the export section |
 | a lesson about how we work (a pitfall, a procedure, a tool trap) | `knowledge/learnings/`; if it is a repeatable process error, `40_error_catalog.md` may be extended without asking |
@@ -49,4 +52,4 @@ When you delegate to a subagent with a bare path, only what lies **on** that pat
 
 ## The closeout pass
 
-At the end of every substantive task: was the lab book written, do the results change numbers or status or TODOs in the project file, is there an export-worthy finding to propose. Then say in one sentence which of these you deliberately left untouched and why. The reporting half is the point: it makes a skipped step visible instead of silent.
+At the end of every substantive task: was the lab book written, do the results change numbers or status in the project file or items in `Todo.md`, is there an export-worthy finding to propose. Then say in one sentence which of these you deliberately left untouched and why. The reporting half is the point: it makes a skipped step visible instead of silent.

@@ -7,7 +7,7 @@
 Shared base via symlink `knowledge/ → ../knowledge` (read-only). Own project file: `knowledge/projects/demo-project.md`. Rules (reading, writing, knowledge export) → parent `CLAUDE.md`, "Rules in sub-projects".
 
 ## Lab book
-Dated entries, experiment logs and running notes → `Laborbuch.md`, not in this file, which stays lean.
+Dated entries, experiment logs and running notes → `Laborbuch.md`, not in this file, which stays lean. Open work steps → `Todo.md`; open decisions stay here.
 
 ## Overview
 
@@ -47,15 +47,9 @@ Mean ± std over 5 seeds, test split (30 % held out). Ground truth: slope 2.5, o
 
 **Interpretation, graded:** the unbiasedness is expected for a least-squares fit of a correctly specified linear model and is a sanity check, not a result. What the numbers do establish is the noise budget: at 5 % noise the slope is still determined to about 0.1 %, so a measurement campaign at that noise level is adequate for the intended use. Whether that holds for a misspecified model is untested.
 
-## Open work
+## Open decisions
 
-- [x] noise sweep over three levels, five seeds (see table)
-- [ ] extend to a misspecified model (quadratic truth, linear fit) — the case where unbiasedness is expected to fail
-- [ ] decide whether the methods note needs the figure at all, or whether the table carries it
-
-### Parked
-
-> **Bootstrap confidence intervals instead of seed spread.** Tried and dropped: with a deterministic generator the seed spread already measures what the bootstrap would estimate, and the extra machinery made `evaluate.py` depend on a resampling library. Reason kept because it will come back the moment the data are real. Detail in the lab book, 2026-02-19.
+- [ ] Does the methods note need the figure at all, or does the table carry it?
 
 ## Knowledge Export
 

@@ -13,7 +13,7 @@ This is a **template repository**, not a library and not a framework with a supp
 
 ## The six ideas this encodes
 
-1. **Two memory files per project, not one.** `CLAUDE.md` holds the stable context and is loaded every session, so it must stay lean. `Laborbuch.md` holds the dated log: experiments, intermediate numbers, dead ends and why they failed. It is read only when the history is actually needed. Without this split the context file grows into a diary and becomes both expensive and unreadable.
+1. **Three memory files per project, not one.** `CLAUDE.md` holds the stable context and the open decisions, and is loaded every session, so it must stay lean. `Laborbuch.md` holds the dated log: experiments, intermediate numbers, dead ends and why they failed. It is read only when the history is actually needed. Without this split the context file grows into a diary and becomes both expensive and unreadable. `Todo.md` holds only the open work steps and is read before every task; done items leave it. Open work kept inside a long log gets overlooked.
 2. **Domain knowledge and process knowledge are different things.** `knowledge/` collects cross-project scientific findings; `knowledge/learnings/` collects how you work: recurring pitfalls, checklists, tool lessons. Every countermeasure is additionally written **where it takes effect**, otherwise the lesson sits in a file nobody opens at the moment it is needed.
 3. **Reported numbers must be reproducible.** Every number in a manuscript comes from a script run against a stored data file. The analysis lives in exactly three files: one that generates the expensive intermediates, one that produces every figure and writes `Output.txt` with the manuscript location of each number, and one with shared helpers.
 4. **Writing follows a fixed pipeline.** Numbers final, then a storyline decided by you, then section-by-section drafting, then a citation check, then an adversarial review in a fresh context, then your own final pass. The adversarial review is a separate step on purpose: the context that wrote the draft cannot see its own gaps.
@@ -93,7 +93,7 @@ git clone https://github.com/The-Player9/research-workspace-template /tmp/rwt
 cp /tmp/rwt/.claude/commands/update-workspace.md <your-workspace>/.claude/commands/
 ```
 
-Every changelog entry ends with a paragraph headed **"Decide, if you are updating from …"**. That is the part no tool can do for you, because it concerns your own proposals, drafts and records. It does not block the update. Instead it is written into your workspace as a dated TODO, in the project it belongs to, so it survives the session in which the update ran. Rejected changes are written down the same way, together with your reason.
+Every changelog entry ends with a paragraph headed **"Decide, if you are updating from …"**. That is the part no tool can do for you, because it concerns your own proposals, drafts and records. It does not block the update. Instead it is written into your workspace as a dated open decision, in the project it belongs to, so it survives the session in which the update ran. Rejected changes are written down the same way, together with your reason.
 
 Do **not** merge this repository into your workspace with git. A workspace created with "Use this template" has no common ancestor with it, and a forced merge lands on exactly the files you own: your filled-in `CLAUDE.md`, your trimmed learnings index, your error catalogue, your rule log.
 

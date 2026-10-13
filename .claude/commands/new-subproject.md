@@ -13,7 +13,7 @@ Creates a sub-project inside this workspace. Read `knowledge/learnings/50_new_su
 
 1. Directory.
 2. Relative symlink: `ln -s ../knowledge knowledge` from inside it. Relative, so the workspace survives a move between machines.
-3. `Laborbuch.md` from `templates/subproject_Laborbuch.md`, header only.
+3. `Laborbuch.md` from `templates/subproject_Laborbuch.md`, header only, and `Todo.md` from `templates/subproject_Todo.md`.
 4. `CLAUDE.md` from `templates/subproject_CLAUDE.md`, header block filled with the project name and the one-sentence overview. **Leave every section you cannot fill empty** — especially "Reproduction" and "Current results". An empty section is a truthful record; a described intention is not.
 5. If raw data is external: `data/raw_manifest.md` from the template.
 6. If it is not a research project: add it to the excluded list in `knowledge/INDEX.md` and say so in the report.

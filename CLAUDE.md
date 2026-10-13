@@ -1,5 +1,5 @@
 <!-- TEMPLATE SKELETON — these are NOT active rules for the surrounding workspace. Placeholders are filled by /init-workspace when this repo is used as a workspace of its own. -->
-<!-- workspace-framework: 0.1.7 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} | source: https://github.com/The-Player9/research-workspace-template -->
+<!-- workspace-framework: 0.1.8 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} | source: https://github.com/The-Player9/research-workspace-template -->
 
 # Research Workspace — Parent CLAUDE.md
 
@@ -13,12 +13,13 @@ Main memory file of this workspace: several research sub-projects in {{FIELD}}, 
 **Raw-data exception:** very large raw datasets (multi-GB) stay on the acquisition machine or NAS; the workspace then holds only derived data (`data/derived/`) plus a **`data/raw_manifest.md`** in the sub-project, listing per dataset its location, acquisition date, size and the script that produced it (otherwise the workspace cannot be traced back to its source after a transfer).
 {{/IF}}
 
-## Memory: four stores
+## Memory: five stores
 
-Persistent information lives in exactly four places.
+Persistent information lives in exactly five places.
 
-- **`CLAUDE.md`** (parent + one per sub-project) — stable project context, structure, design decisions, rules, current status. Loaded every session, so **keep it lean**.
-- **`Laborbuch.md`** (one per sub-project) — chronological: dated entries (`## YYYY-MM-DD`), experiment logs, intermediate results, failed attempts, running TODOs. Read only on demand.
+- **`CLAUDE.md`** (parent + one per sub-project) — stable project context, structure, design decisions, rules, current status, open decisions. Loaded every session, so **keep it lean**.
+- **`Laborbuch.md`** (one per sub-project) — chronological: dated entries (`## YYYY-MM-DD`), experiment logs, intermediate results, failed attempts. Read only on demand.
+- **`Todo.md`** (one per sub-project) — open work steps, with a "Parked" section that keeps the reason. Done items are deleted and recorded in the lab book with their date, not struck through, so the file stays short. Open **decisions** do not go here; they stay in `CLAUDE.md`.
 - **`knowledge/`** — cross-cutting **domain** knowledge (insight about *the field*): mechanisms, results, method recipes.
 - **`knowledge/learnings/`** — **process** knowledge (insight about *how we work*): entry point `knowledge/learnings/00_INDEX.md`; not loaded automatically, the triggers sit as one-liners in this file. Reachable from every sub-project through the `knowledge/` symlink.
 
@@ -27,7 +28,7 @@ How these files relate, what is loaded when, and where a given piece of informat
 ### Rules
 
 - **Writing:** day-to-day notes go into `Laborbuch.md`, **not** into `CLAUDE.md`; newest entry on top. The lab book is **updated without asking on every piece of news**: a new analysis, a new finding, a correction of an older one, a methodological pitfall, a discarded approach and why. Once something becomes a stable conclusion or decision, condense it **briefly** into `CLAUDE.md`; the detail stays in the lab book. What an entry contains, why a correction is a new entry rather than an edit, and how this file stands next to a paper lab book → `knowledge/learnings/06_labbook.md`, **read once at setup**.
-- **Reading:** before substantive work on a sub-project, read its `CLAUDE.md` first; pull `Laborbuch.md` only when the history is needed.
+- **Reading:** before substantive work on a sub-project, read its `CLAUDE.md` and `Todo.md` first (open work kept in the lab book gets overlooked, because the lab book is read only on demand); pull `Laborbuch.md` only when the history is needed.
 - **New sub-projects:** run `/new-subproject` → `knowledge/learnings/50_new_subproject.md`, **read and follow it every time**.
 - **Precedence on conflict:** the closest `CLAUDE.md` decides local working details; no sub-project file may weaken the workspace-wide rules (portability, knowledge-first, edit-don't-append, citation rules). Deliberate deviations must be marked as exceptions there and justified.
 - **Guard-rail `CLAUDE.md` in subfolders:** only where a folder carries a rule whose forgetting causes damage (write ban, frozen paper state, non-final numbers, legacy code) — not because a folder has its own purpose. Three to five lines: the rule plus a pointer to the project `CLAUDE.md`, no index. It also applies when the project `CLAUDE.md` is not in context (long session, subagent given a direct path).
@@ -55,9 +56,9 @@ Make changes by replacing or shortening existing text first, not by appending; k
 Apply to **every** sub-project; stated only here, not duplicated in the project files.
 
 - **Reading `knowledge/`:** read-only, consult before substantive tasks (knowledge-first). Entry point `knowledge/INDEX.md`; own project file `knowledge/projects/<name>.md`.
-- **Writing `knowledge/`:** only when explicitly asked, entries short (2–3 sentences per insight), timestamp in `INDEX.md` updated. **Two exceptions:** `knowledge/learnings/40_error_catalog.md` may be extended without asking whenever a repeatable process error shows up, and `knowledge/learnings/70_changes.md` records every change to a rule file at the moment it is made. Otherwise: project-specific notes, decisions and TODOs into the project `CLAUDE.md`, dated entries into `Laborbuch.md`. Sub-project `CLAUDE.md` files are **never** overwritten from the parent level.
+- **Writing `knowledge/`:** only when explicitly asked, entries short (2–3 sentences per insight), timestamp in `INDEX.md` updated. **Two exceptions:** `knowledge/learnings/40_error_catalog.md` may be extended without asking whenever a repeatable process error shows up, and `knowledge/learnings/70_changes.md` records every change to a rule file at the moment it is made. Otherwise: project-specific notes and decisions into the project `CLAUDE.md`, work steps into `Todo.md`, dated entries into `Laborbuch.md`. Sub-project `CLAUDE.md` files are **never** overwritten from the parent level.
 - **Knowledge export (ask first):** do **not** enter export-worthy findings yourself; propose them (1–2 sentences plus the intended sink: `insights.md` scientific / `methods.md` technical). The user decides and comments; only then does the finding go, **together with that comment**, into the `## Knowledge Export` section at the end of the project `CLAUDE.md`, from where `/sync-knowledge` picks it up.
-- **Closeout pass:** at the end of every substantive task check — (i) lab-book entry written, (ii) do the results change numbers, status or TODOs in the project `CLAUDE.md`, (iii) export-worthy finding → export proposal (see above). State in one sentence which stores you touched and which you deliberately did **not** touch, and why. A file counts as touched only if a write or edit to it ran in this turn; put longer text into the file first and show it in the chat afterwards.
+- **Closeout pass:** at the end of every substantive task check — (i) lab-book entry written, (ii) do the results change numbers or status in the project `CLAUDE.md`, or items in `Todo.md` (delete what is done, add what is new), (iii) export-worthy finding → export proposal (see above). State in one sentence which stores you touched and which you deliberately did **not** touch, and why. A file counts as touched only if a write or edit to it ran in this turn; put longer text into the file first and show it in the chat afterwards.
 - **Cross-project lookup:** call `/ask-knowledge` (also on your own initiative) as soon as a question reaches beyond the current sub-project. For published third-party literature use `/ask-literature` instead (explicit request only, incurs cost).
 - **A separating number needs negative cases:** if a number is meant to tell cases apart, it goes into an outward-facing document only once the same calculation on close cases without the effect stays unremarkable. An extreme value on the positive case only shows that the test responds.
 {{#IF LONGRUNNERS}}
@@ -103,8 +104,8 @@ Defined in `.claude/commands/<name>.md`.
 | Skill | Purpose |
 |-------|---------|
 | `/init-workspace` | Sets this workspace up. Runs once; refuses to run again. |
-| `/update-workspace` | Brings this workspace to a newer framework version: untouched rule files updated and reported, edited ones asked about, follow-up decisions written down as TODOs. |
-| `/new-subproject` | Creates a sub-project: symlink, empty `Laborbuch.md`, `CLAUDE.md` header block. |
+| `/update-workspace` | Brings this workspace to a newer framework version: untouched rule files updated and reported, edited ones asked about, follow-up decisions written down as open decisions. |
+| `/new-subproject` | Creates a sub-project: symlink, empty `Laborbuch.md` and `Todo.md`, `CLAUDE.md` header block. |
 | `/sync-knowledge` | Scans project directories, updates `knowledge/projects/` and `INDEX.md`. |
 | `/ask-knowledge` | Cross-project lookup in `knowledge/`; may be called autonomously. |
 | `/review-adversarial` | Reviewer-2 pass over a manuscript, in a fresh context. |

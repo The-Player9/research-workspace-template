@@ -72,11 +72,11 @@ Per conflicted change show the new rule text, the user's current text at that pl
 
 ## 7. Write the obligations down
 
-Every changelog entry carries a paragraph headed **"Decide, if you are updating from …"**. That paragraph concerns material the framework cannot see: existing proposals, drafts, project files, records. It is **not** a gate on applying the rule, and it is never resolved in this conversation. Write it into the workspace instead, as a dated TODO line, so it outlives the session:
+Every changelog entry carries a paragraph headed **"Decide, if you are updating from …"**. That paragraph concerns material the framework cannot see: existing proposals, drafts, project files, records. It is **not** a gate on applying the rule, and it is never resolved in this conversation. Write it into the workspace instead, as a dated open-decision line, so it outlives the session:
 
-- Concerns one sub-project → a TODO line in that project's `CLAUDE.md`, dated, quoting the obligation in one sentence.
+- Concerns one sub-project → a line under the open decisions in that project's `CLAUDE.md`, dated, quoting the obligation in one sentence.
 - Concerns records or measurements → a dated entry in that project's `Laborbuch.md`.
-- Workspace-wide, or the project is not identifiable → a TODO line in the parent `CLAUDE.md`, and say so in the report.
+- Workspace-wide, or the project is not identifiable → an open-decision line in the parent `CLAUDE.md`, and say so in the report.
 
 **A rejected change becomes an obligation too**, phrased as the decision it is: either "not yet, revisit" or "deliberately not adopted, because …". Write the user's reason down verbatim if they gave one. Without this line the rejection is invisible on the next run and the same offer arrives again with no memory of why it was declined.
 
@@ -88,7 +88,7 @@ Every changelog entry carries a paragraph headed **"Decide, if you are updating 
 
 ## Constraints
 
-- **Never** touch `Laborbuch.md` other than to add an obligation entry, never touch the contents of `knowledge/`, and never touch a sub-project's own files beyond the TODO lines of step 7. A framework update changes rules, never records or results.
+- **Never** touch `Laborbuch.md` other than to add an obligation entry, never touch the contents of `knowledge/`, and never touch a sub-project's own files beyond the lines of step 7. A framework update changes rules, never records or results.
 - **Never** overwrite `CLAUDE.md` wholesale, in any mode. It holds decisions no changelog knows about.
 - Never re-ask the init questions. A module the user now wants is a separate request, and it adds files rather than rewriting existing ones.
 - `--dry-run` writes nothing at all, including the obligations of step 7.

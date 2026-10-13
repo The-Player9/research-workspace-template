@@ -8,6 +8,25 @@ Each entry states what a user must **decide**, not only what moved. Format: `Add
 
 Every release carries the git tag `v<version>`, which is how `/update-workspace` reconstructs the state your workspace started from. A fork that drops the tags still updates, on a weaker test; keep them if you can.
 
+## 0.1.8 — 2026-10-13
+
+**Added** [`templates/subproject_Todo.md`, `examples/demo-project/Todo.md`]
+
+- A fifth store, `Todo.md`, one per sub-project. It holds the open work steps and a "Parked" section with the reason for each parked item. A done item is deleted and recorded in the lab book with its date, not struck through.
+
+**Changed** [`CLAUDE.md`, `templates/subproject_CLAUDE.md`, `knowledge/learnings/05_layout.md`, `knowledge/learnings/06_labbook.md`, `knowledge/learnings/50_new_subproject.md`, `.claude/commands/new-subproject.md`, `.claude/commands/update-workspace.md`, `README.md`, `examples/demo-project/`]
+
+- `Todo.md` is read together with the project `CLAUDE.md` before substantive work, created with every new sub-project, and kept current in the closeout pass.
+- The lab book no longer holds running TODOs. The project `CLAUDE.md` loses its "Open work" and "Parked" sections and gains "Open decisions": decisions only the user can make stay in the file loaded every session.
+- The obligations `/update-workspace` writes in step 7 are now called open-decision lines. They still go into `CLAUDE.md`, because each one is a decision.
+- The core rules contradicted themselves: "Memory" put running TODOs into the lab book, "Writing `knowledge/`" put them into the project `CLAUDE.md`. Both now point to `Todo.md`.
+
+**Why:** in the authoring workspace the lab books grew long, and TODOs inside them were overlooked, because the lab book is read only on demand. A separate file only helps if it is read and stays short, so the reading rule and the deletion of done items are part of the change. The pattern ran for three weeks in one project first. Its file grew mostly from struck-through done items, which is why deleting is written into the rule rather than left to habit.
+
+**Size:** the core grows by 85 words, all in sections present in every profile.
+
+**Decide, if you are updating from 0.1.7:** your sub-projects keep their "Open work" and "Parked" sections until you move them. When you next work on a project, sort each item. A work step goes into a new `Todo.md` from `templates/subproject_Todo.md`, a decision stays in `CLAUDE.md` under "Open decisions", and a done item goes. Check your lab books for open checkboxes as well.
+
 ## 0.1.7 — 2026-10-05
 
 **Changed** [`CLAUDE.md`]
