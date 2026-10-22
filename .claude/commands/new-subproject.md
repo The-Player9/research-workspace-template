@@ -8,6 +8,7 @@ Creates a sub-project inside this workspace. Read `knowledge/learnings/50_new_su
 2. **One sentence** on what it is and what comes out of it (one paper, a method, a dataset).
 3. **Research project or not?** Meta-projects, archives and grant applications get no file under `knowledge/projects/` and belong on the excluded-from-sync list.
 4. **Raw data outside the workspace?** If yes, a raw-data manifest is created.
+5. **Successor of an earlier project?** If yes, which one or ones. Only a declared predecessor contributes entries from `Follow-ups.md`; a project related by topic does not.
 
 ## Then create
 
@@ -17,6 +18,7 @@ Creates a sub-project inside this workspace. Read `knowledge/learnings/50_new_su
 4. `CLAUDE.md` from `templates/subproject_CLAUDE.md`, header block filled with the project name and the one-sentence overview. **Leave every section you cannot fill empty** — especially "Reproduction" and "Current results". An empty section is a truthful record; a described intention is not.
 5. If raw data is external: `data/raw_manifest.md` from the template.
 6. If it is not a research project: add it to the excluded list in `knowledge/INDEX.md` and say so in the report.
+7. If it is a successor project: step 4 of `50_new_subproject.md`. Present each entry of the predecessor in `Follow-ups.md` on its own and let the user decide; move what is taken over and delete it there.
 
 ## Do not
 
@@ -26,4 +28,4 @@ Creates a sub-project inside this workspace. Read `knowledge/learnings/50_new_su
 
 ## Report
 
-Which files were created, which sections were deliberately left empty, and what the first lab-book entry should record once work begins.
+Which files were created, which sections were deliberately left empty, which follow-up entries were taken over and which stayed, and what the first lab-book entry should record once work begins.

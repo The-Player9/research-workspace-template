@@ -17,8 +17,9 @@ Shared base via symlink `knowledge/ → ../knowledge` (read-only). Own project f
 Dated entries, experiment logs and running notes → `Laborbuch.md`, not in this file, which stays lean. Open work steps → `Todo.md`; open decisions stay here.
 ````
 
-4. **If raw data lives outside the workspace** (multi-GB on a NAS or acquisition machine), add `data/raw_manifest.md`: per dataset its location, acquisition date, size and the script that produced it. Without it the workspace cannot be traced back to its source after a transfer.
-5. **Leave the sections you cannot fill yet empty.** "Reproduction" stays empty until a real analysis exists; describing an intended one turns the file into a plan instead of a record.
+4. **Successor project.** If the user names one or more predecessor projects, present their entries in `Follow-ups.md` **one at a time**, and each sub-item of a collective entry separately; the user decides each. Projects that are only related by topic, without being declared predecessors, contribute nothing. For what is taken over: (i) occasion, findings and sources go into the new `CLAUDE.md` as a section "Starting point", the work steps into `Todo.md`; rewrite source paths so they resolve from the new project. (ii) Add the line "Successor project of [X](…)" with the predecessor's actual path to the new `CLAUDE.md`; for an archived predecessor, add that code is taken over only as a copy. (iii) In `Follow-ups.md`, delete what was taken over: whole entries, or only the sub-items on a partial take-over (renumber the rest); delete a project section that becomes empty, heading included, and fix references from other entries. (iv) The first lab-book entry of the new project records what was taken over and what was explicitly not.
+5. **If raw data lives outside the workspace** (multi-GB on a NAS or acquisition machine), add `data/raw_manifest.md`: per dataset its location, acquisition date, size and the script that produced it. Without it the workspace cannot be traced back to its source after a transfer.
+6. **Leave the sections you cannot fill yet empty.** "Reproduction" stays empty until a real analysis exists; describing an intended one turns the file into a plan instead of a record.
 
 ## Variants
 

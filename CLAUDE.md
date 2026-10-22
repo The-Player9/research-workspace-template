@@ -1,5 +1,5 @@
 <!-- TEMPLATE SKELETON — these are NOT active rules for the surrounding workspace. Placeholders are filled by /init-workspace when this repo is used as a workspace of its own. -->
-<!-- workspace-framework: 0.1.8 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} | source: https://github.com/The-Player9/research-workspace-template -->
+<!-- workspace-framework: 0.1.9 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} | source: https://github.com/The-Player9/research-workspace-template -->
 
 # Research Workspace — Parent CLAUDE.md
 
@@ -13,13 +13,14 @@ Main memory file of this workspace: several research sub-projects in {{FIELD}}, 
 **Raw-data exception:** very large raw datasets (multi-GB) stay on the acquisition machine or NAS; the workspace then holds only derived data (`data/derived/`) plus a **`data/raw_manifest.md`** in the sub-project, listing per dataset its location, acquisition date, size and the script that produced it (otherwise the workspace cannot be traced back to its source after a transfer).
 {{/IF}}
 
-## Memory: five stores
+## Memory: six stores
 
-Persistent information lives in exactly five places.
+Persistent information lives in exactly six places.
 
 - **`CLAUDE.md`** (parent + one per sub-project) — stable project context, structure, design decisions, rules, current status, open decisions. Loaded every session, so **keep it lean**.
 - **`Laborbuch.md`** (one per sub-project) — chronological: dated entries (`## YYYY-MM-DD`), experiment logs, intermediate results, failed attempts. Read only on demand.
 - **`Todo.md`** (one per sub-project) — open work steps, with a "Parked" section that keeps the reason. Done items are deleted and recorded in the lab book with their date, not struck through, so the file stays short. Open **decisions** do not go here; they stay in `CLAUDE.md`.
+- **`Follow-ups.md`** (workspace root) — research ideas that leave their project. When the user says "later, but not in this project", write the idea here as a self-contained entry (idea, occasion with its number, approach, sources, reason), not into `Todo.md`; "later, here" goes to "Parked"; a bare "for later" gets one question. Not loaded automatically; read when a successor project is created.
 - **`knowledge/`** — cross-cutting **domain** knowledge (insight about *the field*): mechanisms, results, method recipes.
 - **`knowledge/learnings/`** — **process** knowledge (insight about *how we work*): entry point `knowledge/learnings/00_INDEX.md`; not loaded automatically, the triggers sit as one-liners in this file. Reachable from every sub-project through the `knowledge/` symlink.
 
@@ -105,7 +106,7 @@ Defined in `.claude/commands/<name>.md`.
 |-------|---------|
 | `/init-workspace` | Sets this workspace up. Runs once; refuses to run again. |
 | `/update-workspace` | Brings this workspace to a newer framework version: untouched rule files updated and reported, edited ones asked about, follow-up decisions written down as open decisions. |
-| `/new-subproject` | Creates a sub-project: symlink, empty `Laborbuch.md` and `Todo.md`, `CLAUDE.md` header block. |
+| `/new-subproject` | Creates a sub-project: symlink, empty `Laborbuch.md` and `Todo.md`, `CLAUDE.md` header block; for a successor project, offers the predecessor's entries from `Follow-ups.md` one by one. |
 | `/sync-knowledge` | Scans project directories, updates `knowledge/projects/` and `INDEX.md`. |
 | `/ask-knowledge` | Cross-project lookup in `knowledge/`; may be called autonomously. |
 | `/review-adversarial` | Reviewer-2 pass over a manuscript, in a fresh context. |

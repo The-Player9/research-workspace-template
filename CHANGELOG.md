@@ -8,6 +8,23 @@ Each entry states what a user must **decide**, not only what moved. Format: `Add
 
 Every release carries the git tag `v<version>`, which is how `/update-workspace` reconstructs the state your workspace started from. A fork that drops the tags still updates, on a weaker test; keep them if you can.
 
+## 0.1.9 — 2026-10-22
+
+**Added** [`templates/follow_ups.md`]
+
+- A sixth store, `Follow-ups.md`, one per workspace. It holds research ideas that leave their project because the project will not pursue them. Each entry is self-contained: idea, occasion with its number, approach, sources, date and reason. An entry lives in one place only; moving it here deletes it from the project.
+
+**Changed** [`CLAUDE.md`, `knowledge/learnings/05_layout.md`, `knowledge/learnings/50_new_subproject.md`, `.claude/commands/new-subproject.md`, `.claude/commands/init-workspace.md`, `templates/subproject_Todo.md`, `README.md`]
+
+- "Later, but not in this project" goes to `Follow-ups.md`, "later, here" goes to "Parked", and a bare "for later" gets one question.
+- `/new-subproject` asks whether the new project succeeds an earlier one. For a declared predecessor it presents each entry, and each sub-item of a collective entry, on its own; the user decides each. Context goes into the new `CLAUDE.md` as "Starting point", work steps into `Todo.md`, and the first lab-book entry records what was taken over and what was not.
+
+**Why:** in the authoring workspace finished projects left ideas parked in `Todo.md` files nobody would open again, because the paper was full or the project was archived. A first collection over all projects found 14 entries in 8 projects, six of them in archived projects whose ideas sat in the project `CLAUDE.md` or the paper's outlook rather than in a `Todo.md`. Writing the entry at the moment of the decision avoids that search. A dry run with a simulated successor project found five gaps in the take-over step, now covered: context belonged in `CLAUDE.md`, not `Todo.md`; the predecessor link needed the real path for archived projects; relative source paths broke; partial take-over was unregulated; the lab book did not record what was declined. The dialogue itself was then tried once by the user.
+
+**Size:** the core grows by about 75 words, all in sections present in every profile.
+
+**Decide, if you are updating from 0.1.8:** nothing moves on its own. Look through the "Parked" sections of finished projects, and the outlook of their papers, for ideas no project will pick up, and move them into a new `Follow-ups.md` from `templates/follow_ups.md`.
+
 ## 0.1.8 — 2026-10-13
 
 **Added** [`templates/subproject_Todo.md`, `examples/demo-project/Todo.md`]

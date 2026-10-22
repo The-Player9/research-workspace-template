@@ -21,6 +21,7 @@ The reason the third level exists: a rule that sits on line 200 of a long projec
 | Guard-rail `CLAUDE.md` | when touching files in that folder |
 | `Todo.md` | read with the sub-project `CLAUDE.md` before substantive work, by rule rather than automatically |
 | `Laborbuch.md` | only when explicitly read |
+| `Follow-ups.md` | when a successor project is created |
 | `knowledge/`, `knowledge/learnings/` | only when explicitly read |
 
 This table is the whole cost model. Anything you want always available goes into the parent file and must earn its place; anything else goes into a file with a documented trigger.
@@ -36,6 +37,7 @@ The closest document decides local working details. No sub-project file may weak
 | a dated observation, an experiment log, a failed attempt and why | the project's `Laborbuch.md`, **without asking** |
 | a stable conclusion or decision derived from the above | condensed into the project's `CLAUDE.md`; the detail stays in the lab book |
 | a work step still to be done, or one parked with its reason | the project's `Todo.md`; deleted there once done, with a dated lab-book entry |
+| a research idea the project will not pursue itself ("later, but not here") | the workspace's `Follow-ups.md`, self-contained, deleted from the project; a successor project takes it over at creation |
 | a decision only the user can make | the project's `CLAUDE.md`, under open decisions |
 | a current number that a manuscript will report | the project's `CLAUDE.md`, "Current results", reproducible by the documented script |
 | a finding that other projects would benefit from | proposed as a knowledge export; the user decides and comments, only then does it enter the export section |

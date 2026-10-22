@@ -8,4 +8,4 @@ Open work steps of this project. A done item is deleted here and recorded in `La
 
 ## Parked
 
-> _Items deliberately not being worked on, with the reason. Parked is not deleted: the reason is often the finding._
+> _Items deliberately not being worked on, with the reason. Parked is not deleted: the reason is often the finding. Parked means this project comes back to it; an idea this project will not pursue goes to the workspace's `Follow-ups.md` instead._
