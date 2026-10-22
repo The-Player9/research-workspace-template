@@ -34,9 +34,9 @@ CHANGELOG.md               framework versions; what an update would change
 ```
 
 Modules are switched on by your answers at init: long-running jobs, publishing,
-grant proposals, external raw data, a house code library, a literature
-collection. What you do not switch on is not written, so the rules you carry are
-the ones you use.
+grant proposals and final reports, external raw data, a house code library, a
+literature collection. What you do not switch on is not written, so the rules
+you carry are the ones you use.
 
 ## The lab book, and the paper one you may already keep
 

@@ -39,14 +39,14 @@ Ask only these, and only the ones the preset leaves open. Do not invent further 
 
 ## 2b. Module map
 
-What each answer switches on. `GRANTS` implies `PUBLISHING`; the grant bullet is nested inside the writing-conventions block.
+What each answer switches on. `GRANTS` implies `PUBLISHING`; the grant bullets are nested inside the writing-conventions block.
 
 | Module | Trigger | Files it brings |
 |---|---|---|
 | **core** (never optional) | — | `05_layout.md`, `06_labbook.md`, `40_error_catalog.md`, `50_new_subproject.md`, `70_changes.md`, `00_INDEX.md`; skills `new-subproject`, `update-workspace`, `sync-knowledge`, `ask-knowledge`; `templates/subproject_*`, `templates/guardrail_CLAUDE.md`, `templates/follow_ups.md` |
 | `LONGRUNNERS` | Q5 yes | `10_longrunners.md` + the checkpointing rule in `CLAUDE.md` |
 | `PUBLISHING` | default yes, off only if the user says they do not publish | `20_reproducibility.md`, `30_paper_kickoff.md`, skill `review-adversarial`, the writing-conventions block |
-| `GRANTS` | Q4 role, or asked directly | `60_grant_proposal.md` + its bullet |
+| `GRANTS` | Q4 role, or asked directly | `60_grant_proposal.md`, `65_final_report.md` + their bullets |
 | `RAW_DATA_EXTERNAL` | Q6 yes | `templates/raw_manifest.md` + the portability exception |
 | `HOUSE_LIB` | Q7 yes | the house code library section, filled with the given name and import |
 | `LITERATURE_RAG` | Q8 yes | skill `ask-literature` + its row in the skills table |

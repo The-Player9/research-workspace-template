@@ -8,6 +8,22 @@ Each entry states what a user must **decide**, not only what moved. Format: `Add
 
 Every release carries the git tag `v<version>`, which is how `/update-workspace` reconstructs the state your workspace started from. A fork that drops the tags still updates, on a weaker test; keep them if you can.
 
+## 0.1.10 — 2026-10-22
+
+**Added** [`knowledge/learnings/65_final_report.md`]
+
+- Rules for the final report that closes a funded project, in the grant module. Every deviation from the proposal is reported. Each one opens with what was done or gained instead, then gives the factual reason; "not needed" only where it was factually not needed, otherwise "was not carried out" and what the time went into. A main objective not reached stands as prerequisite in place, remaining obstacle and next step. Every result section ends with a pointer to its own publication.
+
+**Changed** [`CLAUDE.md`, `knowledge/learnings/00_INDEX.md`, `.claude/commands/init-workspace.md`, `README.md`]
+
+- A trigger bullet in the grant block of the core, a row in the learnings index, the file in the `GRANTS` module map.
+
+**Why:** in the authoring workspace a colleague read a final report draft. Three of the notes became this rule: "not developed" should read "was not needed", the paragraph on an unreached main objective was "very negative" and should go, and every work package should say where its results are published. The paragraph stayed, because the report form requires the deviations, and was rewritten as prerequisite, obstacle and next step. The limit on "not needed" keeps the framing from becoming a false claim.
+
+**Size:** the core grows by about 45 words, only in profiles with the grant module.
+
+**Decide, if you are updating from 0.1.9:** nothing moves on its own. If a final report is in progress, check its deviation paragraphs and result sections against `65_final_report.md`. Record your funder's formatting rules for reports in that project's own `CLAUDE.md`.
+
 ## 0.1.9 — 2026-10-22
 
 **Added** [`templates/follow_ups.md`]

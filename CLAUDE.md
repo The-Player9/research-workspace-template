@@ -1,5 +1,5 @@
 <!-- TEMPLATE SKELETON — these are NOT active rules for the surrounding workspace. Placeholders are filled by /init-workspace when this repo is used as a workspace of its own. -->
-<!-- workspace-framework: 0.1.9 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} | source: https://github.com/The-Player9/research-workspace-template -->
+<!-- workspace-framework: 0.1.10 | profile: {{PRESET}} | lang-notes: {{LANG_NOTES}} | lang-pub: {{LANG_PUB}} | modules: {{MODULES}} | source: https://github.com/The-Player9/research-workspace-template -->
 
 # Research Workspace — Parent CLAUDE.md
 
@@ -85,6 +85,7 @@ Conventions for **every** scientific text. Fill these in for your own venue; the
 - **Pipeline:** numbers final → storyline (decided by the user) → draft section by section → citation check → `/review-adversarial` in a fresh context → final pass by the user. Details → `knowledge/learnings/30_paper_kickoff.md`, **read before the first draft**.
 {{#IF GRANTS}}
 - **Funding proposals:** additional rules (work-package objectives state what will be known, with the number on the validation criterion; no repetition across sections; justification duty; risk section) → `knowledge/learnings/60_grant_proposal.md`, **read before the first line of a proposal**. The conventions above apply there as well.
+- **Final reports:** deviations from the proposal are all reported, each opening with what was done or gained instead and then the factual reason; every result section ends with a pointer to its own publication → `knowledge/learnings/65_final_report.md`, **read before the first line and before every revision**.
 {{/IF}}
 {{/IF}}
 
